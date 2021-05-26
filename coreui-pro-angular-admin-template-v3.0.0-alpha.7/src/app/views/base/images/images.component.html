@@ -1,0 +1,188 @@
+<div class="fade-in">
+  <c-card>
+    <c-card-header>
+      Images <code>cImg</code><small> directive</small>
+      <c-card-header-actions>
+        <a
+          href="https://coreui.io/docs/content/images/"
+          target="_blank"
+          class="card-header-action"
+        >
+          <small class="text-muted">docs</small>
+        </a>
+      </c-card-header-actions>
+    </c-card-header>
+    <c-card-body>
+      <c-row>
+        <c-col sm="6" md="4">
+          <img
+            cImg
+            [fluidGrow]="true"
+            shape="rounded-0"
+            width="512"
+            height="240"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=54"
+            class="mb-2"
+            placeholderColor="lightgray"
+          />
+          <p>Lorem ipsum</p>
+        </c-col>
+        <c-col sm="6" md="4">
+          <img
+            cImg
+            [fluidGrow]="true"
+            shape="rounded-sm"
+            width="512"
+            height="240"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=55"
+            class="mb-2"
+          />
+          <p>Lorem ipsum</p>
+        </c-col>
+        <c-col sm="6" md="4">
+          <img
+            cImg
+            [fluidGrow]="true"
+            shape="rounded-lg"
+            width="512"
+            height="240"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=56"
+            class="mb-2"
+          />
+          <p>Lorem ipsum</p>
+        </c-col>
+      </c-row>
+      <c-row>
+        <c-col sm="6" md="4">
+          <img
+            cImg
+            [fluid]="true"
+            shape="rounded-top"
+            width="512"
+            height="240"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=57"
+            class="mb-2"
+          />
+          <p>Lorem ipsum</p>
+        </c-col>
+        <c-col sm="6" md="4">
+          <img
+            cImg
+            [fluid]="true"
+            shape="rounded-bottom"
+            width="512"
+            height="240"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=58"
+            class="mb-2"
+          />
+          <p>Lorem ipsum</p>
+        </c-col>
+        <c-col sm="6" md="4">
+          <img
+            cImg
+            [fluid]="true"
+            shape="rounded-left"
+            width="512"
+            height="240"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=59"
+            class="mb-2"
+          />
+          <p>Lorem ipsum</p>
+        </c-col>
+      </c-row>
+      <c-row>
+        <c-col sm="6" md="4">
+          <img
+            cImg
+            [fluid]="true"
+            shape="rounded-circle"
+            width="512"
+            height="240"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=61"
+            class="mb-2"
+          />
+          <p>Lorem ipsum</p>
+        </c-col>
+        <c-col sm="6" md="4">
+          <img
+            cImg
+            [fluid]="true"
+            shape="rounded-pill"
+            width="512"
+            height="240"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=62"
+            class="mb-2"
+          />
+          <p>Lorem ipsum</p>
+        </c-col>
+        <c-col sm="6" md="4">
+          <img
+            cImg
+            [fluid]="true"
+            [thumbnail]="true"
+            shape="rounded"
+            width="512"
+            height="240"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=63"
+            class="mb-2"
+          />
+          <p>Lorem ipsum</p>
+        </c-col>
+      </c-row>
+      <hr />
+      <c-row>
+        <c-col>
+          <img
+            cImg
+            [fluid]="true"
+            align="left"
+            shape="rounded-circle"
+            width="256"
+            height="256"
+            loading="lazy"
+            src="https://picsum.photos/512/512/?image=64"
+            class="mb-2"
+          />
+          <img
+            cImg
+            [fluid]="true"
+            align="right"
+            shape="rounded-lg"
+            width="256"
+            height="256"
+            loading="lazy"
+            src="https://picsum.photos/512/512/?image=65"
+            class="mb-2"
+          />
+        </c-col>
+      </c-row>
+      <hr />
+      <c-row>
+        <c-col>
+          <img
+            cImg
+            [fluid]="true"
+            [block]="true"
+            align="center"
+            shape="rounded-lg"
+            width="1024"
+            height="480"
+            loading="lazy"
+            src="https://picsum.photos/1024/480/?image=66"
+            class="mb-2"
+            [routerLink]="'/'"
+          />
+        </c-col>
+      </c-row>
+    </c-card-body>
+  </c-card>
+</div>

@@ -1,0 +1,25 @@
+:host-context(.c-dark-theme) {
+  option {
+    background-color: #515b65;
+    border: 1px solid #23282c;
+  }
+  select[multiple] option {
+    border: none;
+  }
+  .custom-select {
+    @extend .form-control !optional;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+:host c-input-group-prepend .btn c-icon {
+  &:only-child {
+    display: flex;
+  }
+}
+
+:host c-input-group-append .btn c-icon {
+  &:only-child {
+    display: flex;
+  }
+}

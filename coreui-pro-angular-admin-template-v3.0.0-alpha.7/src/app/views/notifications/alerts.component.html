@@ -1,0 +1,123 @@
+<div class="fade-in">
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          <strong>Bootstrap Alerts</strong>
+          <c-card-header-actions>
+            <a href="https://coreui.io" target="_blank">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <div *ngFor="let alert of colors">
+            <c-alert [color]="alert">
+              <span>This is a <strong class="text-{{ alert }}">{{ alert }}</strong> alert — check it out!</span>
+            </c-alert>
+          </div>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          <strong>Alert</strong>{{ ' ' }}<small>links</small>
+          <c-card-header-actions>
+            <a href="https://coreui.io" target="_blank">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <div *ngFor="let alert of colors">
+            <c-alert [color]="alert">
+              <span>This is a <strong>{{ alert }}</strong> alert with an <a href="#" class="c-alert-link">example link</a>. Give it a click if you like.</span>
+            </c-alert>
+          </div>
+
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          <strong>Alert</strong> with timeout
+          <c-card-header-actions>
+            <a href="https://coreui.io" target="_blank">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <c-alert color="warning" [show]="!!showTime[0]" [fade]="true" [timeout]="showTime[0]" (dismissed)="showTime[0]=0" closeButton="true">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+          </c-alert>
+          <c-alert #alert1 color="danger" [show]="!!showTime[1]" [fade]="true" [timeout]="showTime[1]" (dismissed)="showTime[1]=0">
+            <strong class="c-alert-heading">Alert</strong> dismiss in {{(showTime[1] / 1000) - alert1.clock}} seconds.
+          </c-alert>
+          <c-alert #alert2 color="success" [show]="!!showTime[2]" [fade]="true" [timeout]="showTime[2]" (dismissed)="showTime[2]=0">
+            <strong class="c-alert-heading">Alert</strong> dismiss in {{(showTime[2] / 1000) - alert2.clock}} seconds.
+            <c-progress size="xs">
+              <c-progress-bar [value]="(showTime[2] / 1000) - alert2.clock" [max]="showTime[2]/1000" color="success"></c-progress-bar>
+            </c-progress>
+          </c-alert>
+          <hr>
+          <button cButton color="secondary" (click)="onResetShowTime()">Reset</button>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          <strong>Alert</strong> dismissible
+          <c-card-header-actions>
+            <a href="https://coreui.io" target="_blank">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <c-alert color="warning" [closeButton]="dismissible" [fade]="true" (dismissed)="onDismiss(0)" [show]="showDismiss[0]" >
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+          </c-alert>
+          <c-alert color="danger" [closeButton]="dismissible" [fade]="true" (dismissed)="onDismiss(1)" [show]="showDismiss[1]" iconHtml="<i class='cil-ban'></i>">
+            <strong class="c-alert-heading">Holy guacamole!</strong> You should check in on some of those fields below.
+          </c-alert>
+          <c-alert color="success" [closeButton]="dismissible" [fade]="false" (dismissed)="onDismiss(2)" [show]="showDismiss[2]">
+            <strong class="c-alert-heading">No fade!</strong> You should check in on some of those fields below.
+          </c-alert>
+          <hr>
+          <button cButton color="primary" [ngClass]="'mfe-1'" (click)="onToggleDismiss()">Toggle</button>
+          <button cButton color="secondary" (click)="onResetDismiss()">Reset</button>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          <strong>Alert</strong> with additional content
+          <c-card-header-actions>
+            <a href="https://coreui.io" target="_blank">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <c-alert [color]="color">
+            <h4 class="c-alert-heading">Well done!</h4>
+            <span>
+              <p>You successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+              <hr>
+              <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </span>
+          </c-alert>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

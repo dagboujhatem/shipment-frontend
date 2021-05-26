@@ -1,0 +1,57 @@
+<c-button-group class="mr-1">
+  <button cButton color="light">
+    <c-icon name="cil-envelope-closed"></c-icon>
+  </button>
+  <button cButton color="light">
+    <c-icon name="cil-star"></c-icon>
+  </button>
+  <button cButton color="light">
+    <c-icon name="cil-bookmark"></c-icon>
+  </button>
+</c-button-group>
+<c-button-group class="mr-1">
+  <button cButton color="light">
+    <c-icon name="cil-share"></c-icon>
+  </button>
+  <button cButton color="light">
+    <c-icon name="cil-share-all"></c-icon>
+  </button>
+  <button cButton color="light">
+    <c-icon name="cil-share-boxed"></c-icon>
+  </button>
+</c-button-group>
+<button cButton color="light">
+  <c-icon name="cil-trash"></c-icon>
+</button>
+<c-button-group dropdown class="ml-1">
+  <button cButton [routerLink] dropdownToggle color="light">
+    <c-icon name="cil-tags"></c-icon>
+  </button>
+  <div *dropdownMenu class="dropdown-menu">
+    <a [routerLink] cDropdownItem>
+      add label
+      <c-badge color="info" class="mfs-auto">Home</c-badge>
+    </a>
+    <a [routerLink] cDropdownItem>
+      add label
+      <c-badge color="warning" class="mfs-auto">Work</c-badge>
+    </a>
+    <a [routerLink] cDropdownItem>
+      add label
+      <c-badge color="success" class="mfs-auto">Clients</c-badge>
+    </a>
+    <a [routerLink] cDropdownItem>
+      add label
+      <c-badge color="primary" class="mfs-auto">News</c-badge>
+    </a>
+  </div>
+</c-button-group>
+
+<c-button-group class="float-right">
+  <button cButton color="light">
+    <c-icon name="cil-chevron-left"></c-icon>
+  </button>
+  <button cButton color="light">
+    <c-icon name="cil-chevron-right"></c-icon>
+  </button>
+</c-button-group>

@@ -1,0 +1,86 @@
+<div class="fade-in">
+  <c-card>
+    <c-card-header>
+      Pagination
+      <c-card-header-actions>
+        <a href="https://valor-software.com/ngx-bootstrap/#/pagination" target="_blank">
+          <small class="text-muted">docs</small>
+        </a>
+      </c-card-header-actions>
+    </c-card-header>
+    <c-card-body>
+      <c-row>
+        <c-col col="12" class="d-sm-down-none">
+          <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+        </c-col>
+        <c-col col="12">
+          <pagination [boundaryLinks]="true" [totalItems]="totalItems" [(ngModel)]="currentPage" class="pagination-sm"
+                      [maxSize]="6"
+                      previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
+          </pagination>
+        </c-col>
+        <c-col col="12" class="d-sm-down-none">
+          <pagination [directionLinks]="false" [boundaryLinks]="true" [totalItems]="totalItems"
+                      [(ngModel)]="currentPage"></pagination>
+        </c-col>
+        <c-col col="12">
+          <pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage"
+                      (numPages)="smallnumPages = $event"></pagination>
+        </c-col>
+      </c-row>
+      <pre class="card card-body card-header mb-3">The selected page no: {{currentPage}}/{{smallnumPages}}</pre>
+    </c-card-body>
+    <c-card-footer>
+      <button cButton color="info" (click)="setPage(3)">Set current page to: 3</button>
+    </c-card-footer>
+  </c-card>
+  <c-card>
+    <c-card-header>
+      Pagination <small>states & limits</small>
+    </c-card-header>
+    <c-card-body>
+      <c-row>
+        <c-col col="12">
+          <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm"
+                      previousText="&lsaquo;" nextText="&rsaquo;" [boundaryLinks]="true"></pagination>
+        </c-col>
+        <c-col col="12">
+          <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm"
+                      previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"
+                      [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event"></pagination>
+        </c-col>
+      </c-row>
+      <pre class="card card-body card-header">Page: {{bigCurrentPage}} / {{numPages}}</pre>
+    </c-card-body>
+  </c-card>
+  <c-card>
+    <c-card-header>
+      Pager
+    </c-card-header>
+    <c-card-body>
+      <c-row>
+        <c-col col="12">
+          <pagination
+            class="pagination-lg mfe-auto"
+            [directionLinks]="false"
+            [totalItems]="totalItems"
+            [(ngModel)]="currentPager"
+            (numPages)="smallnumPages = $event">
+          </pagination>
+        </c-col>
+
+        <c-col col="12">
+          <pager
+            [totalItems]="totalItems"
+            [(ngModel)]="currentPager"
+            (pageChanged)="pageChanged($event)"
+            pageBtnClass="btn btn-link"
+            [itemsPerPage]="10"
+            class="mfe-auto"
+          >
+          </pager>
+        </c-col>
+      </c-row>
+    </c-card-body>
+  </c-card>
+</div>

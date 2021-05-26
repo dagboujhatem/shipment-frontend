@@ -1,0 +1,31 @@
+<div class="fade-in">
+  <c-card>
+    <c-card-header>
+      Toaster
+      <c-card-header-actions>
+        <a
+          href="https://github.com/scttcper/ngx-toastr"
+          target="_blank"
+          class="card-header-action"
+        >
+          <small>docs</small>
+        </a>
+      </c-card-header-actions>
+    </c-card-header>
+    <c-card-body>
+      <button cButton color="success" class="mr-1 mb-1" (click)="showSuccess()">
+        Try Success
+      </button>
+      <button cButton color="danger" class="mr-1 mb-1" (click)="showError()">
+        Try Error
+      </button>
+      <button cButton color="warning" class="mr-1 mb-1" (click)="showWarning()">
+        Try Warning
+      </button>
+      <button cButton color="info" class="mr-1 mb-1" (click)="showInfo()">
+        Try Info
+      </button>
+    </c-card-body>
+  </c-card>
+  <div toastContainer></div>
+</div>

@@ -1,0 +1,25 @@
+<div class="fade-in">
+  <c-card>
+    <c-card-header>
+      Google Maps
+      <a href="https://coreui.io/pro/angular/" class="badge badge-danger mfs-2">CoreUI Pro</a>
+      <c-card-header-actions >
+        <a href="https://github.com/SebastianM/angular-google-maps" class="card-header-action" target="_blank"><small class="text-muted">docs</small></a>
+      </c-card-header-actions>
+    </c-card-header>
+    <c-card-body>
+      <small>{{ title }}</small>
+      <!-- this creates a google map on the page with the given lat/lng from -->
+      <!-- the component as the initial center of the map: -->
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+        <agm-marker *ngFor="let m of markers; let i = index"
+                    [latitude]="m.lat" [longitude]="m.lng"
+                    [label]="m.label" [title]="m.title" >
+          <agm-info-window [disableAutoPan]="false">
+            <a href="{{m.www}}" target="_blank" class="px-2"><strong>{{m.title}}</strong></a>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </c-card-body>
+  </c-card>
+</div>

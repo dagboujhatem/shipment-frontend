@@ -1,0 +1,137 @@
+<div class="fade-in">
+  <c-card>
+    <c-card-header>
+      DataTable
+      <c-card-header-actions>
+        <a
+          href="https://github.com/mariuszfoltak/angular2-datatable"
+          target="_blank"
+          class="card-header-action"
+        >
+          <small class="text-muted">docs</small>
+        </a> </c-card-header-actions
+      >
+    </c-card-header>
+    <c-card-body>
+      <c-row class="mb-3">
+        <c-col md="4" class="offset-md-8">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="cil-search"></i></span>
+            </div>
+            <input cInput
+
+              [(ngModel)]="filterQuery"
+              placeholder="Search by name"
+            />
+          </div>
+        </c-col>
+      </c-row>
+      <table
+        class="table table-striped table-hover table-responsive-lg"
+        [mfData]="data | dataFilter: filterQuery"
+        #mf="mfDataTable"
+        [mfRowsOnPage]="10"
+      >
+        <thead>
+          <tr>
+            <th style="width: 20%;">
+              <mfDefaultSorter by="name" #sortName>
+                Name
+                <span
+                  *ngIf="sortName.isSortedByMeAsc"
+                  class="cil-arrow-top"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  *ngIf="sortName.isSortedByMeDesc"
+                  class="cil-arrow-bottom"
+                  aria-hidden="true"
+                ></span>
+              </mfDefaultSorter>
+            </th>
+            <th style="width: 35%;">
+              <mfDefaultSorter by="email" #sortEmail>
+                Email
+                <span
+                  *ngIf="sortEmail.isSortedByMeAsc"
+                  class="cil-arrow-top"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  *ngIf="sortEmail.isSortedByMeDesc"
+                  class="cil-arrow-bottom"
+                  aria-hidden="true"
+                ></span>
+              </mfDefaultSorter>
+            </th>
+            <th style="width: 10%;">
+              <mfDefaultSorter by="age" #sortAge>
+                Age
+                <span
+                  *ngIf="sortAge.isSortedByMeAsc"
+                  class="cil-arrow-top"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  *ngIf="sortAge.isSortedByMeDesc"
+                  class="cil-arrow-bottom"
+                  aria-hidden="true"
+                ></span>
+              </mfDefaultSorter>
+            </th>
+            <th style="width: 20%;">
+              <mfDefaultSorter by="city" #sortCity>
+                City
+                <span
+                  *ngIf="sortCity.isSortedByMeAsc"
+                  class="cil-arrow-top"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  *ngIf="sortCity.isSortedByMeDesc"
+                  class="cil-arrow-bottom"
+                  aria-hidden="true"
+                ></span>
+              </mfDefaultSorter>
+            </th>
+            <th style="width: 10%;">
+              <mfDefaultSorter by="regDate" #sortRegDate>
+                Registered
+                <span
+                  *ngIf="sortRegDate.isSortedByMeAsc"
+                  class="cil-arrow-top"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  *ngIf="sortRegDate.isSortedByMeDesc"
+                  class="cil-arrow-bottom"
+                  aria-hidden="true"
+                ></span>
+              </mfDefaultSorter>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of mf.data">
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            <td class="text-left">{{ item.age }}</td>
+            <td>{{ item.city | uppercase }}</td>
+            <td>{{ item.regDate | date }}</td>
+<!--            <td>{{ getDate(item.regDate) }}</td>-->
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5">
+              <mfBootstrapPaginator
+                [rowsOnPageSet]="[5, 10, 15]"
+              ></mfBootstrapPaginator>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </c-card-body>
+  </c-card>
+</div>

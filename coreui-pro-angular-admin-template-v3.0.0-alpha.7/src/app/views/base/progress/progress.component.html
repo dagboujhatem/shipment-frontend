@@ -1,0 +1,130 @@
+<div class="fade-in">
+  <c-card>
+    <c-card-header>
+      Progress
+    </c-card-header>
+    <c-card-body>
+      <c-row>
+        <c-col sm="4">
+          <c-progress>
+            <c-progress-bar [value]="55" [max]="100"></c-progress-bar>
+          </c-progress>
+        </c-col>
+        <c-col sm="4">
+          <c-progress>
+            <c-progress-bar
+              [striped]="true"
+              [value]="22"
+              [max]="100"
+              [color]="'warning'"
+            >
+              {{ 22 / 100 | percent }}
+            </c-progress-bar>
+          </c-progress>
+        </c-col>
+        <c-col sm="4">
+          <c-progress>
+            <c-progress-bar
+              [striped]="true"
+              class="active"
+              [max]="200"
+              [value]="166"
+              [color]="'danger'"
+            >
+              <i>{{ 166 / 200 | percent }}</i>
+            </c-progress-bar>
+          </c-progress>
+        </c-col>
+      </c-row>
+    </c-card-body>
+  </c-card>
+  <c-card>
+    <c-card-header> Progress <small>dynamic</small> </c-card-header>
+    <c-card-body>
+      <c-progress>
+        <c-progress-bar
+          [striped]="true"
+          [animated]="true"
+          [max]="200"
+          [value]="dynamic"
+        >
+          <span style="color: white; white-space: nowrap;">
+            {{ dynamic }} / {{ 200 }}
+          </span>
+        </c-progress-bar>
+      </c-progress>
+
+      <small><em>No animation</em></small>
+      <c-progress [style]="'height: 1.5rem;'">
+        <c-progress-bar
+          [striped]="true"
+          [color]="'secondary'"
+          [value]="dynamic"
+          [max]="150"
+        >
+          <b>{{ dynamic / 150 | percent }}</b>
+        </c-progress-bar>
+      </c-progress>
+      <small><em>Object (changes type based on value)</em></small>
+      <c-progress [style]="'height: 2rem;'">
+        <c-progress-bar
+          [striped]="true"
+          [animated]="true"
+          [value]="dynamic"
+          [max]="100"
+          [color]="type"
+        >
+          {{ type }}
+        </c-progress-bar>
+      </c-progress>
+      <br />
+      <button cButton [size]="'sm'" [color]="'primary'" (click)="random()">
+        Randomize
+      </button>
+    </c-card-body>
+  </c-card>
+  <c-card>
+    <c-card-header> Progress <small>size</small> </c-card-header>
+    <c-card-body>
+      <c-progress size="xs">
+        <c-progress-bar [value]="20" color="primary"></c-progress-bar>
+      </c-progress>
+      <br />
+      <c-progress size="sm">
+        <c-progress-bar [value]="40" color="secondary"></c-progress-bar>
+      </c-progress>
+      <br />
+      <c-progress>
+        <c-progress-bar [value]="60" color="success"></c-progress-bar>
+      </c-progress>
+      <br />
+      <c-progress [style]="'height: 1.5rem;'">
+        <c-progress-bar [value]="80" color="warning"></c-progress-bar>
+      </c-progress>
+      <br />
+      <c-progress [style]="'height: 2rem;'">
+        <c-progress-bar [value]="90" color="dark">
+          <c-icon name="cib-coreui-c"></c-icon>
+        </c-progress-bar>
+      </c-progress>
+    </c-card-body>
+  </c-card>
+  <c-card>
+    <c-card-header> Progress <small>stacked</small> </c-card-header>
+    <c-card-body>
+      <c-progress>
+        <c-progress-bar
+          *ngFor="let bar of stacked"
+          [value]="bar.value"
+          [color]="bar.color"
+        >
+          {{ bar.label }}
+        </c-progress-bar>
+      </c-progress>
+      <br />
+      <button cButton size="sm" color="primary" (click)="randomize()">
+        {{ buttonCaption }} randomize
+      </button>
+    </c-card-body>
+  </c-card>
+</div>

@@ -1,0 +1,208 @@
+<div class="fade-in">
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Tabs <code><small>[activeTab]="'1'</small>"</code>
+        </c-card-header>
+        <c-card-body>
+<!--          <c-tabset [activeTab]="setTab" (activeTabChange)="setTab=$event" boxed="true" [variant]="'pills'">-->
+<!--          <c-tabset [(activeTab)]="setTab" (activeTabChange)="onTabChange($event)">-->
+<!--          <c-tabset variant="pills" boxed="true">-->
+          <c-tabset boxed="true" [activeTab]="'1'">
+            <c-tablist>
+              <c-tab *ngFor="let tab of tabs2">
+                <c-icon [name]="tab.icon" class="pb-1"></c-icon>
+                {{tab.header}}
+              </c-tab>
+            </c-tablist>
+            <c-tab-content>
+              <c-tab-pane *ngFor="let tab of tabs2">
+                <p>
+                  {{tab.panel}}
+                </p>
+              </c-tab-pane>
+            </c-tab-content>
+          </c-tabset>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Tabs <code><small>boxed="top-right"</small></code>
+        </c-card-header>
+        <c-card-body>
+          <c-tabset boxed="top-right">
+            <c-tablist>
+              <c-tab *ngFor="let tab of tabs2"  [disabled]="tab.disabled">
+                  {{tab.header}} <c-badge *ngIf="tab.header==='Messages'" color="info" pill="true">7</c-badge>
+              </c-tab>
+            </c-tablist>
+            <c-tab-content>
+              <c-tab-pane *ngFor="let tab of tabs2">
+                <p>
+                  {{tab.panel}}
+                </p>
+              </c-tab-pane>
+            </c-tab-content>
+          </c-tabset>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Tabs <code><small>left</small></code>
+        </c-card-header>
+        <c-card-body>
+          <c-tabset boxed="left" justified="true">
+            <c-tablist variant="tabs">
+              <c-tab *ngFor="let tab of tabs2"  [disabled]="tab.disabled">
+                <c-icon [name]="tab.icon" class="pb-1"></c-icon>
+                {{tab.header}}
+              </c-tab>
+            </c-tablist>
+            <c-tab-content>
+              <c-tab-pane *ngFor="let tab of tabs2">
+                <p>
+                  {{tab.panel}}
+                </p>
+              </c-tab-pane>
+            </c-tab-content>
+          </c-tabset>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Tabs <code><small>right</small></code>
+        </c-card-header>
+        <c-card-body>
+          <c-tabset boxed="right" fill="fill">
+            <c-tablist>
+              <c-tab *ngFor="let tab of tabs" [disabled]="tab.disabled">
+                {{tab.header}}
+              </c-tab>
+            </c-tablist>
+            <c-tab-content>
+              <c-tab-pane *ngFor="let tab of tabs">
+                <p>
+                  {{tab.panel}}
+                </p>
+              </c-tab-pane>
+            </c-tab-content>
+          </c-tabset>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Tabs <code><small>variant="pills"</small></code>
+        </c-card-header>
+        <c-card-body>
+          <c-tabset variant="pills">
+            <c-tablist>
+              <c-tab *ngFor="let tab of tabs2"  [disabled]="tab.disabled">
+                {{tab.header}}
+              </c-tab>
+            </c-tablist>
+            <hr>
+            <c-tab-content>
+              <c-tab-pane *ngFor="let tab of tabs2">
+                <p>
+                  {{tab.panel}}
+                </p>
+              </c-tab-pane>
+            </c-tab-content>
+          </c-tabset>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Tabs <code><small>fill</small></code>
+        </c-card-header>
+        <c-card-body>
+          <c-tabset fill="fill" variant="pills">
+            <c-tablist>
+              <c-tab *ngFor="let tab of tabs" [disabled]="tab.disabled">
+                {{tab.header}}
+              </c-tab>
+            </c-tablist>
+            <hr>
+            <c-tab-content>
+              <c-tab-pane *ngFor="let tab of tabs">
+                <p>
+                  {{tab.panel}}
+                </p>
+              </c-tab-pane>
+            </c-tab-content>
+          </c-tabset>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Tabs <code><small>nav-underline</small></code>
+        </c-card-header>
+        <c-card-body>
+          <c-tabset class="nav-underline nav-underline-primary">
+            <c-tablist>
+              <c-tab *ngFor="let tab of tabs" [disabled]="tab.disabled">
+                {{tab.header}}
+              </c-tab>
+            </c-tablist>
+            <c-tab-content>
+              <br>
+              <c-tab-pane *ngFor="let tab of tabs">
+                <p>
+                  {{tab.panel}}
+                </p>
+              </c-tab-pane>
+            </c-tab-content>
+          </c-tabset>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Tabs <code><small>vertical</small></code>
+        </c-card-header>
+        <c-card-body>
+          <c-tabset variant="pills">
+            <c-row noGutters="true">
+              <c-col sm="4">
+                <c-tablist class="flex-column">
+                  <c-tab *ngFor="let tab of tabs2" [disabled]="tab.disabled">
+                    {{tab.header}}
+                  </c-tab>
+                </c-tablist>
+              </c-col>
+              <c-col sm="8">
+                <c-tab-content class="px-3 p-0">
+                  <c-tab-pane *ngFor="let tab of tabs2">
+                    <p>
+                      {{tab.panel}}
+                    </p>
+                  </c-tab-pane>
+                </c-tab-content>
+              </c-col>
+            </c-row>
+          </c-tabset>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

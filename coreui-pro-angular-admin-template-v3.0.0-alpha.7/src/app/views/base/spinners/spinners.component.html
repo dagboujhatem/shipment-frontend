@@ -1,0 +1,99 @@
+<div class="fade-in">
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Spinner - border
+        </c-card-header>
+        <c-card-body>
+          <c-spinner class="mr-1"></c-spinner>
+          <c-spinner class="mr-1" color="primary"></c-spinner>
+          <c-spinner class="mr-1" color="secondary"></c-spinner>
+          <c-spinner class="mr-1" color="success"></c-spinner>
+          <c-spinner class="mr-1" color="danger"></c-spinner>
+          <c-spinner class="mr-1" color="warning"></c-spinner>
+          <c-spinner class="mr-1" color="info"></c-spinner>
+          <c-spinner class="mr-1" color="light"></c-spinner>
+          <c-spinner class="mr-1" color="dark"></c-spinner>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Spinner - grow
+        </c-card-header>
+        <c-card-body>
+          <c-spinner class="mr-1" [grow]="true"></c-spinner>
+          <c-spinner class="mr-1" [grow]="true" color="primary"></c-spinner>
+          <c-spinner class="mr-1" [grow]="true" color="secondary"></c-spinner>
+          <c-spinner class="mr-1" [grow]="true" color="success"></c-spinner>
+          <c-spinner class="mr-1" [grow]="true" color="danger"></c-spinner>
+          <c-spinner class="mr-1" [grow]="true" color="warning"></c-spinner>
+          <c-spinner class="mr-1" [grow]="true" color="info"></c-spinner>
+          <c-spinner class="mr-1" [grow]="true" color="light"></c-spinner>
+          <c-spinner class="mr-1" [grow]="true" color="dark"></c-spinner>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Spinner - size
+        </c-card-header>
+        <c-card-body>
+          <c-spinner class="mr-1" size="sm"></c-spinner>
+          <c-spinner class="mr-1" grow="true" size="sm"></c-spinner>
+          <c-spinner class="mr-1"></c-spinner>
+          <c-spinner class="mr-1" grow="true"></c-spinner>
+          <c-spinner
+            class="mr-1"
+            [ngStyle]="{ 'width.rem': 3, 'height.rem': 3 }"
+          ></c-spinner>
+          <c-spinner
+            class="mr-1"
+            grow="true"
+            [ngStyle]="{ 'width.rem': 3, 'height.rem': 3 }"
+          ></c-spinner>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Spinner - buttons
+        </c-card-header>
+        <c-card-body>
+          <button cButton color="primary" class="mr-1 mt-3" [disabled]="true">
+            <c-spinner size="sm" role="status" aria-hidden="true"></c-spinner>
+            <span class="sr-only">Loading...</span>
+          </button>
+          <button cButton color="primary" class="mr-1 mt-3" [disabled]="true">
+            <c-spinner
+              size="sm"
+              role="status"
+              aria-hidden="true"
+              class="mr-1"
+            ></c-spinner>
+            <span>Loading...</span>
+          </button>
+          <button cButton color="primary" class="mr-1 mt-3" [disabled]="true">
+            <c-spinner size="sm" grow="true" aria-hidden="true"></c-spinner>
+            <span class="sr-only">Loading...</span>
+          </button>
+          <button cButton color="primary" class="mr-1 mt-3" [disabled]="true">
+            <c-spinner
+              size="sm"
+              grow="grow"
+              aria-hidden="true"
+              class="mr-1"
+            ></c-spinner>
+            <span>Loading...</span>
+          </button>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

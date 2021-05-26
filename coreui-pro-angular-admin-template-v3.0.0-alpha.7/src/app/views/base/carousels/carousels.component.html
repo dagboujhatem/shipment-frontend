@@ -1,0 +1,133 @@
+<div class="fade-in">
+  <c-row>
+    <c-col sm="6">
+      <c-card>
+        <c-card-header>
+          Bootstrap Carousel
+          <c-card-header-actions>
+            <a href="https://valor-software.com/ngx-bootstrap/#/carousel" target="_blank" rel="noopener noreferer">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <carousel [interval]="false">
+            <slide>
+              <img src="https://picsum.photos/id/1/900/500" alt="First slide" style="display: block; width: 100%;">
+            </slide>
+            <slide>
+              <img src="https://picsum.photos/id/1026/900/500" alt="Second slide" style="display: block; width: 100%;">
+            </slide>
+            <slide>
+              <img src="https://picsum.photos/id/1031/900/500" alt="Third slide" style="display: block; width: 100%;">
+            </slide>
+          </carousel>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col sm="6">
+      <c-card>
+        <c-card-header>
+          Carousel
+          <small> optional captions</small>
+        </c-card-header>
+        <c-card-body>
+          <carousel [interval]="false">
+            <slide>
+              <img src="https://picsum.photos/id/1032/900/500" alt="First slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
+            </slide>
+            <slide>
+              <img src="https://picsum.photos/id/1036/900/500" alt="Second slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </slide>
+            <slide>
+              <img src="https://picsum.photos/id/1043/900/500" alt="Third slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Third slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </div>
+            </slide>
+          </carousel>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col sm="6">
+      <c-card>
+        <c-card-header>
+          Carousel
+          <small> configuring defaults</small>
+        </c-card-header>
+        <c-card-body>
+          <carousel [interval]="false">
+            <slide>
+              <img src="https://picsum.photos/id/1054/900/500" alt="First slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
+            </slide>
+            <slide>
+              <img src="https://picsum.photos/id/1059/900/500" alt="Second slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </slide>
+            <slide>
+              <img src="https://picsum.photos/id/1065/900/500" alt="Third slide" style="display: block; width: 100%;">
+              <div class="carousel-caption d-none d-md-block">
+                <h3>Third slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </div>
+            </slide>
+          </carousel>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col sm="6">
+      <c-card>
+        <c-card-header>
+          Carousel
+          <small> dynamic slides</small>
+        </c-card-header>
+        <c-card-body>
+          <carousel [interval]="myInterval" [noWrap]="noWrapSlides" [(activeSlide)]="activeSlideIndex">
+            <slide *ngFor="let slide of slides; let index=index">
+              <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+
+              <div class="carousel-caption">
+                <h4>Slide {{index}}</h4>
+                <p>{{slide.text}}</p>
+              </div>
+            </slide>
+          </carousel>
+          <br/>
+          <div>
+            <button cButton color="info" class="mr-1" (click)="addSlide()">Add Slide</button>
+            <button cButton color="info" class="mr-1" (click)="removeSlide()">Remove Current</button>
+            <button cButton color="info" class="mr-1" (click)="removeSlide(2)">Remove #3</button>
+          </div>
+          <c-form-group class="mt-2">
+            <c-form-check variant="checkbox">
+              <input cInput type="checkbox" [(ngModel)]="noWrapSlides" id="disableLoop">
+              <label cLabel variant="checkbox" for="disableLoop">Disable Slide Looping</label>
+            </c-form-check>
+          </c-form-group>
+          <div class="form-group">
+            <label>Interval milliseconds (Negative number or 0 to stop the interval): </label>
+            <input cInput type="number" [(ngModel)]="myInterval">
+          </div>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

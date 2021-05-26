@@ -1,0 +1,37 @@
+<div class="fade-in">
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          <b>Bootstrap Breadcrumbs</b>
+          <c-card-header-actions>
+            <a class="card-header-action" href="http://coreui.io/docs/components/bootstrap-breadcrumb/" target="_blank">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <c-breadcrumb aria-label="breadcrumb" role="navigation" cBreadcrumbRouter divider="&nbsp;>&nbsp;"></c-breadcrumb>
+          <c-breadcrumb aria-label="breadcrumb" role="navigation" [items]="items.slice(0,1)"></c-breadcrumb>
+          <c-breadcrumb aria-label="breadcrumb" role="navigation" [items]="items.slice(0,2)"></c-breadcrumb>
+          <c-breadcrumb aria-label="breadcrumb" role="navigation" [items]="items.slice(0,3)"></c-breadcrumb>
+          <c-breadcrumb aria-label="breadcrumb" role="navigation" [items]="items.slice(0,4)"></c-breadcrumb>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="breadcrumb-item" href="#">Library</a>
+            </li>
+            <li class="breadcrumb-item">
+            <a class="breadcrumb-item" href="#">Data</a>
+            </li>
+            <li class="breadcrumb-item active">
+              <span class="breadcrumb-item active">Bootstrap</span>
+            </li>
+          </ol>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

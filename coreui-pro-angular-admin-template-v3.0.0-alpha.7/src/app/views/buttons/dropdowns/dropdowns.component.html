@@ -1,0 +1,364 @@
+<div class="fade-in">
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Bootstrap Dropdowns
+          <c-card-header-actions>
+            <a href="https://coreui.io" target="_blank">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton [routerLink] dropdownToggle color="secondary" class="dropdown-toggle">
+              Link dropdown
+            </button>
+            <div *dropdownMenu class="dropdown-menu">
+              <h6 cDropdownHeader>Header</h6>
+              <a [routerLink] cDropdownItem>Action</a>
+              <a [routerLink] cDropdownItem>Another action</a>
+              <c-dropdown-divider></c-dropdown-divider>
+              <a [routerLink] cDropdownItem>Separated link</a>
+            </div>
+          </c-button-group>
+          <c-button-group dropdown #formDropdown="bs-dropdown" [insideClick]="true" class="mr-1 mb-1">
+            <button cButton dropdownToggle color="secondary" class="dropdown-toggle">
+              Form dropdown
+            </button>
+            <div *dropdownMenu class="dropdown-menu" style="padding-top: 0;">
+              <button cButton (click)="formDropdown.hide()" style="right: 0;" size="sm" class="close" color="link">
+                <c-icon name="cil-x" size="xs"></c-icon>
+              </button>
+              <form class="px-4 py-3">
+                <div class="form-group">
+                  <label for="exampleDropdownFormEmail1">Email address</label>
+                  <input cInput type="email" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleDropdownFormPassword1">Password</label>
+                  <input cInput type="password" id="exampleDropdownFormPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input cInput type="checkbox" id="dropdownCheck">
+                    <label class="form-check-label" for="dropdownCheck">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+                <button cButton type="submit" color="primary" (click)="formDropdown.hide()">Sign in</button>
+              </form>
+              <c-dropdown-divider></c-dropdown-divider>
+              <a cDropdownItem [routerLink]>New around here? Sign up</a>
+              <a cDropdownItem [routerLink]>Forgot password?</a>
+            </div>
+          </c-button-group>
+          <hr>
+          <c-button-group dropdown class="mr-1 mb-1" >
+            <button cButton dropdownToggle color="primary" class="dropdown-toggle">
+              Primary
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton dropdownToggle color="secondary" class="dropdown-toggle">
+              Secondary
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton dropdownToggle color="success" class="dropdown-toggle">
+              Success
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton dropdownToggle color="info" class="dropdown-toggle">
+              Info
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton dropdownToggle color="warning" class="dropdown-toggle">
+              Warning
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton dropdownToggle color="danger" class="dropdown-toggle">
+              Danger
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <hr>
+          <c-button-group dropdown class="mr-1 mb-1" >
+            <button cButton color="primary">
+              Primary
+            </button>
+            <button cButton dropdownToggle color="primary" class="dropdown-toggle dropdown-toggle-split">
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton color="secondary">
+              Secondary
+            </button>
+            <button cButton dropdownToggle color="secondary" class="dropdown-toggle dropdown-toggle-split">
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton color="success">
+              Success
+            </button>
+            <button cButton dropdownToggle color="success" class="dropdown-toggle dropdown-toggle-split">
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton color="info">
+              Info
+            </button>
+            <button cButton dropdownToggle color="info" class="dropdown-toggle dropdown-toggle-split"></button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton color="warning">
+              Warning
+            </button>
+            <button cButton dropdownToggle color="warning" class="dropdown-toggle dropdown-toggle-split">
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton color="danger">
+              Danger
+            </button>
+            <button cButton dropdownToggle color="danger" class="dropdown-toggle dropdown-toggle-split "></button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <hr>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton [routerLink] dropdownToggle color="secondary" size="lg" class="dropdown-toggle">
+              Large button
+            </button>
+            <div *dropdownMenu class="dropdown-menu">
+              <h6 cDropdownHeader>Header</h6>
+              <a [routerLink] cDropdownItem>Action</a>
+              <a [routerLink] cDropdownItem>Another action</a>
+              <c-dropdown-divider></c-dropdown-divider>
+              <a [routerLink] cDropdownItem>Separated link</a>
+            </div>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton [routerLink] color="secondary" size="lg">
+              Large split button
+            </button>
+            <button cButton id="button-split" aria-controls="dropdown-split" [routerLink] dropdownToggle color="secondary" size="lg" class="dropdown-toggle dropdown-toggle-split">
+            </button>
+            <div id="dropdown-split" *dropdownMenu class="dropdown-menu dropdown-menu-right">
+              <h6 cDropdownHeader>Header</h6>
+              <a [routerLink] cDropdownItem>Action</a>
+              <a [routerLink] cDropdownItem>Another action</a>
+              <c-dropdown-divider></c-dropdown-divider>
+              <a [routerLink] cDropdownItem>Separated link</a>
+            </div>
+          </c-button-group>
+          <hr>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton [routerLink] dropdownToggle color="secondary" size="sm" class="dropdown-toggle">
+              Small button
+            </button>
+            <div *dropdownMenu class="dropdown-menu">
+              <h6 cDropdownHeader>Header</h6>
+              <a [routerLink] cDropdownItem>Action</a>
+              <a [routerLink] cDropdownItem>Another action</a>
+              <c-dropdown-divider></c-dropdown-divider>
+              <a [routerLink] cDropdownItem>Separated link</a>
+            </div>
+          </c-button-group>
+          <c-button-group dropdown class="mr-1 mb-1">
+            <button cButton [routerLink] color="secondary" size="sm">
+              Small split button
+            </button>
+            <button cButton [routerLink] dropdownToggle color="secondary" size="sm" class="dropdown-toggle dropdown-toggle-split"></button>
+            <div *dropdownMenu class="dropdown-menu">
+              <h6 cDropdownHeader>Header</h6>
+              <a [routerLink] cDropdownItem>Action</a>
+              <a [routerLink] cDropdownItem>Another action</a>
+              <c-dropdown-divider></c-dropdown-divider>
+              <a [routerLink] cDropdownItem>Separated link</a>
+            </div>
+          </c-button-group>
+
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Dropdowns
+          <small>manual triggers</small>
+        </c-card-header>
+        <c-card-body>
+          <c-button-group dropdown #manual="bs-dropdown" (isOpenChange)="change($event)" placement="top" class="mr-1 mb-1">
+            <button cButton dropdownToggle color="primary" class="dropdown-toggle">
+              Button dropdown
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a>
+              </li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else
+                here</a></li>
+              <li class="dropdown-divider"></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <button cButton class="mr-1 mb-1" (click)="toggleDropdown($event)">Toggle</button>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Dropdowns
+          <small>dropup variation</small>
+        </c-card-header>
+        <c-card-body>
+          <c-button-group dropdown  [dropup]="isDropup" class="mr-1 mb-1">
+            <button cButton dropdownToggle color="primary" class="dropdown-toggle">
+              Dropup
+            </button>
+            <ul *dropdownMenu aria-labelledby="button-dropup" class="dropdown-menu">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a>
+              </li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else here</a></li>
+              <li cDropdownDivider></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+          <c-button-group dropdown placement="bottom right"  class="mr-1 mb-1">
+            <button cButton dropdownToggle color="primary" class="dropdown-toggle">
+              Dropright
+            </button>
+            <ul id="dropdown-dropup" *dropdownMenu aria-labelledby="button-dropup" class="dropdown-menu dropdown-menu-right">
+              <li role="menuitem"><a cDropdownItem [routerLink]>Action</a></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Another action</a>
+              </li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Something else
+                here</a></li>
+              <li class="dropdown-divider"></li>
+              <li role="menuitem"><a cDropdownItem [routerLink]>Separated link</a>
+              </li>
+            </ul>
+          </c-button-group>
+        </c-card-body>
+        <c-card-footer>
+          <c-form-check variant="checkbox">
+            <input cInput
+                   id="isDropup"
+                   type="checkbox"
+                   value="true"
+                   [(ngModel)]="isDropup"
+                   style="display: inline-block;">
+            <label clabel for="isDropup">{{ isDropup ? 'Is dropup' : 'Is dropdown' }}</label>
+          </c-form-check>
+        </c-card-footer>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

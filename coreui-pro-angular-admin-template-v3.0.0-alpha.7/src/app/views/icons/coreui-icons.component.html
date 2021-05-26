@@ -1,0 +1,32 @@
+<div class="fade-in">
+  <c-card>
+    <c-card-header>
+      {{ title }}
+      <c-card-header-actions>
+        <a
+          href="https://coreui.io/icons"
+          rel="noreferrer noopener"
+          target="_blank"
+          class="card-header-action"
+        >
+          <small class="text-muted">download</small>
+        </a>
+      </c-card-header-actions>
+    </c-card-header>
+    <c-card-body>
+      <c-row class="text-center">
+        <c-col
+          class="mb-5"
+          xs="6"
+          sm="4"
+          md="3"
+          xl="2"
+          *ngFor="let icon of icons"
+        >
+          <c-icon [name]="icon[0]" size="3xl" [title]="icon[0]"></c-icon>
+          <div>{{ toKebabCase(icon[0]) }}</div>
+        </c-col>
+      </c-row>
+    </c-card-body>
+  </c-card>
+</div>

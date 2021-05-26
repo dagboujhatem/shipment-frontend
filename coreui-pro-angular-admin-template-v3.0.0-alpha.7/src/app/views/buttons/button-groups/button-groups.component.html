@@ -1,0 +1,193 @@
+<div class="fade-in">
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          <strong>Button group</strong>
+          <c-card-header-actions>
+            <a class="card-header-action" href="http://coreui.io/docs/components/bootstrap-button-group/" target="_blank">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <c-button-group>
+            <button cButton color="secondary">Left</button>
+            <button cButton color="secondary">Middle</button>
+            <button cButton color="secondary">Right</button>
+          </c-button-group>
+        </c-card-body>
+      </c-card>
+      <c-card>
+        <c-card-header>Button group
+          <small>toolbar</small>
+        </c-card-header>
+        <c-card-body>
+          <c-button-toolbar justify="justify" class="mb-3" aria-label="Toolbar with button groups">
+            <c-button-group class="mr-2" aria-label="First group">
+              <button cButton color="secondary">1</button>
+              <button cButton color="secondary">2</button>
+              <button cButton color="secondary">3</button>
+              <button cButton color="secondary">4</button>
+            </c-button-group>
+            <c-button-group class="mr-2" aria-label="Second group">
+              <button cButton color="secondary">5</button>
+              <button cButton color="secondary">6</button>
+              <button cButton color="secondary">7</button>
+            </c-button-group>
+            <c-button-group aria-label="Third group">
+              <button cButton color="secondary">8</button>
+            </c-button-group>
+          </c-button-toolbar>
+          <c-button-toolbar class="mb-3" role="toolbar" aria-label="Toolbar with button groups">
+            <c-button-group class="mr-2" aria-label="First group">
+              <button cButton color="secondary">1</button>
+              <button cButton color="secondary">2</button>
+              <button cButton color="secondary">3</button>
+              <button cButton color="secondary">4</button>
+            </c-button-group>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="btnGroupAddon">@</span>
+              </div>
+              <input cInput placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon" />
+            </div>
+          </c-button-toolbar>
+          <c-button-toolbar class="justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+            <c-button-group clsss="mr-2" aria-label="First group">
+              <button cButton color="secondary">1</button>
+              <button cButton color="secondary">2</button>
+              <button cButton color="secondary">3</button>
+              <button cButton color="secondary">4</button>
+            </c-button-group>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="btnGroupAddon2">@</span>
+              </div>
+              <input cInput placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2" />
+            </div>
+          </c-button-toolbar>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>Button group
+          <small>sizing</small>
+        </c-card-header>
+        <c-card-body>
+          <c-button-group size="lg" class="mb-3" aria-label="Large button group">
+            <button cButton color="secondary">Left</button>
+            <button cButton color="secondary">Middle</button>
+            <button cButton color="secondary">Right</button>
+          </c-button-group>
+          <br/>
+          <c-button-group class="mb-3" aria-label="Default button group">
+            <button cButton color="secondary">Left</button>
+            <button cButton color="secondary">Middle</button>
+            <button cButton color="secondary">Right</button>
+          </c-button-group>
+          <br/>
+          <c-button-group size="sm" aria-label="Small button group">
+            <button cButton color="secondary">Left</button>
+            <button cButton color="secondary">Middle</button>
+            <button cButton color="secondary">Right</button>
+          </c-button-group>
+        </c-card-body>
+      </c-card>
+      <c-card>
+        <c-card-header>Button group
+          <small>nesting</small>
+        </c-card-header>
+        <c-card-body>
+          <c-button-group aria-label="Button group with nested dropdown" class="mr-1 mb-1" >
+            <button cButton color="secondary">1</button>
+            <button cButton color="secondary">2</button>
+            <c-button-group dropdown>
+                <button cButton color="secondary" dropdownToggle>Dropdown</button>
+                <div *dropdownMenu class="dropdown-menu">
+                  <a cDropdownItem [routerLink]>Dropdown link</a>
+                  <a cDropdownItem [routerLink]>Dropdown link</a>
+                </div>
+            </c-button-group>
+          </c-button-group>
+          <c-button-group aria-label="Button group with nested split dropdown" class="mr-1 mb-1">
+            <button cButton color="secondary">1</button>
+            <button cButton color="secondary">2</button>
+            <c-button-group dropdown>
+                <button cButton color="secondary">Split</button>
+                <button cButton color="secondary" dropdownToggle class="dropdown-toggle dropdown-toggle-split"></button>
+                <div *dropdownMenu class="dropdown-menu dropdown-menu-right">
+                  <a cDropdownItem [routerLink]>Dropdown item</a>
+                  <a cDropdownItem [routerLink]>Dropdown item</a>
+                </div>
+            </c-button-group>
+          </c-button-group>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>Button group
+          <small>vertical variation</small>
+        </c-card-header>
+        <c-card-body>
+          <c-button-group vertical aria-label="Vertical button group">
+            <button cButton color="secondary">Button</button>
+            <button cButton color="secondary">Button</button>
+            <button cButton color="secondary">Button</button>
+            <button cButton color="secondary">Button</button>
+            <button cButton color="secondary">Button</button>
+            <button cButton color="secondary">Button</button>
+          </c-button-group>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>Button group
+          <small>vertical variation</small>
+        </c-card-header>
+        <c-card-body>
+          <c-button-group vertical="vertical" aria-label="Vertical button group">
+            <button cButton color="secondary">Button</button>
+            <button cButton color="secondary">Button</button>
+            <c-button-group dropdown>
+              <button cButton color="secondary" dropdownToggle id="btnGroupVerticalDrop1" type="button">Dropdown</button>
+              <div *dropdownMenu aria-labelledby="btnGroupVerticalDrop1" class="dropdown-menu">
+                <a cDropdownItem [routerLink]>Dropdown link</a>
+                <a cDropdownItem [routerLink]>Dropdown link</a>
+              </div>
+            </c-button-group>
+            <button cButton color="secondary">Button</button>
+            <button cButton color="secondary">Button</button>
+            <c-button-group dropdown="right">
+              <button cButton color="secondary" type="button">Split</button>
+              <button cButton color="secondary" dropdownToggle id="btnGroupVerticalDrop2" type="button" class="dropdown-toggle dropdown-toggle-split"></button>
+              <div *dropdownMenu aria-labelledby="btnGroupVerticalDrop2" class="dropdown-menu">
+                <a cDropdownItem [routerLink]>Dropdown link</a>
+                <a cDropdownItem [routerLink]>Dropdown link</a>
+              </div>
+            </c-button-group>
+            <c-button-group dropdown dropup="true">
+              <button cButton color="secondary" dropdownToggle id="btnGroupVerticalDrop3" type="button" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+              <div *dropdownMenu aria-labelledby="btnGroupVerticalDrop3" class="dropdown-menu">
+                <a cDropdownItem [routerLink]>Dropdown link</a>
+                <a cDropdownItem [routerLink]>Dropdown link</a>
+              </div>
+            </c-button-group>
+            <c-button-group dropdown dropup="true">
+              <button cButton color="secondary" dropdownToggle id="btnGroupVerticalDrop4" type="button" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+              <div *dropdownMenu aria-labelledby="btnGroupVerticalDrop4" class="dropdown-menu">
+                <a cDropdownItem [routerLink]>Dropdown link</a>
+                <a cDropdownItem [routerLink]>Dropdown link</a>
+              </div>
+            </c-button-group>
+          </c-button-group>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

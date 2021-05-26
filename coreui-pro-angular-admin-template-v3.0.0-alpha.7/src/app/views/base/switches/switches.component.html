@@ -1,0 +1,473 @@
+<div class="fade-in">
+  <c-row>
+    <c-col md="12">
+      <c-card>
+        <c-card-header>
+          3d Switch
+        </c-card-header>
+        <c-card-body>
+          <c-switch variant="3d" color="primary" [checked]="state[1]" (checked)="toggleChange($event)" class="mr-3" disabled></c-switch>
+          <c-switch variant="3d" color="primary" [checked]="state[1]" (checked)="toggleChange($event)" class="mr-3"></c-switch>
+          <c-switch variant="3d" color="secondary" [checked]="state[1]" (checked)="toggleChange($event)" class="mr-3"></c-switch>
+          <c-switch variant="3d" color="success" [checked]="state[1]" (checked)="toggleChange($event)" class="mr-3"></c-switch>
+          <c-switch variant="3d" color="warning" [checked]="state[1]" (checked)="toggleChange($event)" class="mr-3"></c-switch>
+          <c-switch variant="3d" color="info" [checked]="state[1]" (checked)="toggleChange($event)" class="mr-3"></c-switch>
+          <c-switch variant="3d" color="danger" [checked]="state[1]" (checked)="toggleChange($event)" class="mr-3"></c-switch>
+          <c-switch variant="3d" color="dark" [checked]="state[1]" (checked)="toggleChange($event)" class="mr-3"></c-switch>
+          <c-switch variant="3d" color="light" [checked]="state[1]" (checked)="toggleChange($event)" class="mr-3"></c-switch>
+          <hr/>
+          <c-switch type="radio" name="radio-1" value="1" [checked]="radio==='1'" (toggle)="radioChange($event)" variant="3d" color="primary" class="mr-3"></c-switch>
+          <c-switch type="radio" name="radio-1" value="2" [checked]="radio==='2'" (toggle)="radioChange($event)" variant="3d" color="info" class="mr-3" ></c-switch>
+          <c-switch type="radio" name="radio-1" value="3" [checked]="radio==='3'" (toggle)="radioChange($event)" variant="3d" color="warning" class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch default
+        </c-card-header>
+        <c-card-body>
+          <c-switch color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch color="primary" checked class="mr-3"></c-switch>
+          <c-switch color="secondary" checked class="mr-3"></c-switch>
+          <c-switch color="success" checked class="mr-3"></c-switch>
+          <c-switch color="warning" checked class="mr-3"></c-switch>
+          <c-switch color="info" checked class="mr-3"></c-switch>
+          <c-switch color="danger" checked class="mr-3"></c-switch>
+          <c-switch color="dark" checked class="mr-3"></c-switch>
+          <c-switch color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch <code>shape="pill"</code>
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="pill" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch shape="pill" color="primary" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" color="success" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" color="warning" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" color="info" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" color="danger" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" color="dark" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch <code>variant="outline"</code>
+        </c-card-header>
+        <c-card-body>
+          <c-switch variant="outline" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch variant="outline" color="primary" checked class="mr-3"></c-switch>
+          <c-switch variant="outline" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch variant="outline" color="success" checked class="mr-3"></c-switch>
+          <c-switch variant="outline" color="warning" checked class="mr-3"></c-switch>
+          <c-switch variant="outline" color="info" checked class="mr-3"></c-switch>
+          <c-switch variant="outline" color="danger" checked class="mr-3"></c-switch>
+          <c-switch variant="outline" color="dark" checked class="mr-3"></c-switch>
+          <c-switch variant="outline" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch outline pill
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="pill" variant="outline" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch shape="pill" variant="outline" color="primary" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="success" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="warning" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="info" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="danger" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="dark" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" outline color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch <code>variant="opposite"</code>
+        </c-card-header>
+        <c-card-body>
+          <c-switch variant="opposite" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch variant="opposite" color="primary" checked class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="success" checked class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="warning" checked class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="info" checked class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="danger" checked class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="dark" checked class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch opposite + pill
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="pill" variant="opposite" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch shape="pill" variant="opposite" color="primary" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="success" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="warning" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="info" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="danger" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="dark" checked class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label
+        </c-card-header>
+        <c-card-body>
+          <c-switch labelOn="on" labelOff="off" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch labelOn="on" labelOff="off" color="primary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" color="success" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" color="warning" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" color="info" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" color="danger" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" color="dark" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label + pill
+        </c-card-header>
+        <c-card-body>
+          <c-switch labelOn="on" labelOff="off" shape="pill" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch labelOn="on" labelOff="off" shape="pill" color="primary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" shape="pill" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" shape="pill" color="success" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" shape="pill" color="warning" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" shape="pill" color="info" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" shape="pill" color="danger" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" shape="pill" color="dark" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" shape="pill" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label outline
+        </c-card-header>
+        <c-card-body>
+          <c-switch labelOn="on" labelOff="off" variant="outline" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" color="primary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" color="success" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" color="warning" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" color="info" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" color="danger" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" color="dark" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label outline + pills
+        </c-card-header>
+        <c-card-body>
+          <c-switch labelOn="on" labelOff="off" variant="outline" shape="pill" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" shape="pill" color="primary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" shape="pill" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" shape="pill" color="success" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" shape="pill" color="warning" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" shape="pill" color="info" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" shape="pill" color="danger" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" shape="pill" color="dark" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="outline" shape="pill" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label opposite
+        </c-card-header>
+        <c-card-body>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" color="primary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" color="success" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" color="warning" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" color="info" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" color="danger" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" color="dark" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label opposite + pill
+        </c-card-header>
+        <c-card-body>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" shape="pill" color="primary" checked class="mr-3" disabled></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" shape="pill" color="primary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" shape="pill" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" shape="pill" color="success" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" shape="pill" color="warning" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" shape="pill" color="info" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" shape="pill" color="danger" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" shape="pill" color="dark" checked class="mr-3"></c-switch>
+          <c-switch labelOn="on" labelOff="off" variant="opposite" shape="pill" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label icon
+        </c-card-header>
+        <c-card-body>
+          <c-switch color="primary" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch color="secondary" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch color="success" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch color="warning" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch color="info" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch color="danger" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch color="dark" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch color="light" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label icon - pill
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="pill" color="primary" disabled checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch shape="pill" color="primary" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch shape="pill" color="secondary" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch shape="pill" color="success" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch shape="pill" color="warning" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch shape="pill" color="info" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch shape="pill" color="danger" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch shape="pill" color="dark" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch shape="pill" color="light" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch label icon outline
+        </c-card-header>
+        <c-card-body>
+          <c-switch variant="outline" color="primary" disabled checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch variant="outline" color="primary" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch variant="outline" color="secondary" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch variant="outline" color="success" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch variant="outline" color="warning" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch variant="outline" color="info" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch variant="outline" color="danger" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch variant="outline" color="dark" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+          <c-switch variant="outline" color="light" checked [labelOn]="'&#x2713;'" [labelOff]="'&#x2715;'" class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label icon outline + pill
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="pill" variant="outline" color="primary" disabled checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="primary" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="secondary" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="success" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="warning" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="info" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="danger" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="dark" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="outline" color="light" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label icon opposite
+        </c-card-header>
+        <c-card-body>
+          <c-switch variant="opposite" color="primary" disabled checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="primary" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="secondary" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="success" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="warning" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="info" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="danger" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="dark" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch variant="opposite" color="light" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch with label icon opposite - pill
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="pill" variant="opposite" color="primary" disabled checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="primary" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="secondary" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="success" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="warning" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="info" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="danger" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="dark" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+          <c-switch shape="pill" variant="opposite" color="light" checked labelOn="&#x2713;" labelOff="&#x2715;" class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch square
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="square" color="primary" disabled checked class="mr-3"></c-switch>
+          <c-switch shape="square" color="primary" checked class="mr-3"></c-switch>
+          <c-switch shape="square" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch shape="square" color="success" checked class="mr-3"></c-switch>
+          <c-switch shape="square" color="warning" checked class="mr-3"></c-switch>
+          <c-switch shape="square" color="info" checked class="mr-3"></c-switch>
+          <c-switch shape="square" color="danger" checked class="mr-3"></c-switch>
+          <c-switch shape="square" color="dark" checked class="mr-3"></c-switch>
+          <c-switch shape="square" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch square opposite
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="square" variant="opposite" color="primary" disabled checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="opposite" color="primary" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="opposite" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="opposite" color="success" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="opposite" color="warning" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="opposite" color="info" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="opposite" color="danger" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="opposite" color="dark" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="opposite" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch square outline
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="square" variant="outline" color="primary" disabled checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" color="primary" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" color="success" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" color="warning" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" color="info" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" color="danger" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" color="dark" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Switch square outline label
+        </c-card-header>
+        <c-card-body>
+          <c-switch shape="square" variant="outline" labelOn="on" labelOff="off" color="primary" disabled checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" labelOn="on" labelOff="off" color="secondary" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" labelOn="on" labelOff="off" color="primary" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" labelOn="on" labelOff="off" color="success" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" labelOn="on" labelOff="off" color="warning" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" labelOn="on" labelOff="off" color="info" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" labelOn="on" labelOff="off" color="danger" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" labelOn="on" labelOff="off" color="dark" checked class="mr-3"></c-switch>
+          <c-switch shape="square" variant="outline" labelOn="on" labelOff="off" color="light" checked class="mr-3"></c-switch>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="12">
+      <c-card>
+        <c-card-header>
+          Sizes
+        </c-card-header>
+        <c-card-body class="p-0">
+          <table class="table table-hover table-striped table-align-middle mb-0">
+            <thead>
+            <th>Size</th>
+            <th>Example</th>
+            <th>CSS Class</th>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                Large
+              </td>
+              <td>
+                <c-switch variant="3d" size="lg" color="primary" checked class="mr-3"></c-switch>
+              </td>
+              <td>
+                Add following attribute <code>size="lg"</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Normal
+              </td>
+              <td>
+                <c-switch variant="3d" color="primary" checked class="mr-3"></c-switch>
+              </td>
+              <td>
+                -
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Small
+              </td>
+              <td>
+                <c-switch variant="3d" size="sm" color="primary" checked class="mr-3"></c-switch>
+              </td>
+              <td>
+                Add following attribute <code>size="sm"</code>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

@@ -1,0 +1,130 @@
+<div>
+  <p class="text-center">New Message</p>
+  <form>
+    <div class="form-row mb-3">
+      <label for="to" class="col-2 col-sm-1 col-form-label">To:</label>
+      <c-col col="12" sm="11">
+        <input cInput
+          type="email"
+          id="to"
+          placeholder="Type email"
+        />
+      </c-col>
+    </div>
+    <div class="form-row mb-3">
+      <label for="cc" class="col-2 col-sm-1 col-form-label">CC:</label>
+      <c-col col="12" sm="11">
+        <input cInput
+          type="email"
+          id="cc"
+          placeholder="Type email"
+        />
+      </c-col>
+    </div>
+    <div class="form-row mb-3">
+      <label for="bcc" class="col-2 col-sm-1 col-form-label">BCC:</label>
+      <c-col col="12" sm="11">
+        <input cInput
+          type="email"
+          id="bcc"
+          placeholder="Type email"
+        />
+      </c-col>
+    </div>
+  </form>
+  <c-row>
+    <c-col sm="11" class="ml-auto">
+      <div class="toolbar" role="toolbar">
+        <div class="btn-group mr-1">
+          <button cButton color="light">
+            <c-icon name="cil-bold"></c-icon>
+          </button>
+          <button cButton color="light">
+            <c-icon name="cil-italic"></c-icon>
+          </button>
+          <button cButton color="light">
+            <c-icon name="cil-underline"></c-icon>
+          </button>
+        </div>
+        <div class="btn-group mr-1">
+          <button cButton color="light">
+            <c-icon name="cil-align-left"></c-icon>
+          </button>
+          <button cButton color="light">
+            <c-icon name="cil-align-right"></c-icon>
+          </button>
+          <button cButton color="light">
+            <c-icon name="cil-align-center"></c-icon>
+          </button>
+          <button cButton color="light">
+            <c-icon name="cil-justify-center"></c-icon>
+          </button>
+        </div>
+        <div class="btn-group mr-1">
+          <button cButton color="light">
+            <c-icon name="cil-indent-increase"></c-icon>
+          </button>
+          <button cButton color="light">
+            <c-icon name="cil-indent-decrease"></c-icon>
+          </button>
+        </div>
+        <div class="btn-group mr-1">
+          <button cButton color="light">
+            <c-icon name="cil-list"></c-icon>
+          </button>
+          <button cButton color="light">
+            <c-icon name="cil-list-numbered"></c-icon>
+          </button>
+        </div>
+        <button cButton color="light" class="mr-1">
+          <c-icon name="cil-trash"></c-icon>
+        </button>
+        <button cButton color="light">
+          <c-icon name="cil-paperclip"></c-icon>
+        </button>
+        <c-button-group dropdown class="ml-1">
+          <button cButton [routerLink] dropdownToggle color="light">
+            <c-icon name="cil-tags"></c-icon>
+          </button>
+          <div *dropdownMenu class="dropdown-menu">
+            <a [routerLink] cDropdownItem>
+              add label
+              <c-badge color="info" class="mfs-auto">Home</c-badge>
+            </a>
+            <a [routerLink] cDropdownItem>
+              add label
+              <c-badge color="warning" class="mfs-auto">
+                Work
+              </c-badge>
+            </a>
+            <a [routerLink] cDropdownItem>
+              add label
+              <c-badge color="success" class="mfs-auto">Clients</c-badge>
+            </a>
+            <a [routerLink] cDropdownItem>
+              add label
+              <c-badge color="primary" class="mfs-auto">News</c-badge>
+            </a>
+          </div>
+        </c-button-group>
+      </div>
+      <div class="form-group mt-4">
+        <textarea
+          class="form-control"
+          id="message"
+          name="body"
+          rows="12"
+          placeholder="Click here to reply"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <button cButton class="mr-1" type="submit" color="success">Send</button>
+        <button cButton class="mr-1" type="submit" color="light">Draft</button>
+        <button cButton class="mr-1" type="submit" color="danger">
+          Discard
+        </button>
+      </div>
+    </c-col>
+  </c-row>
+</div>
+

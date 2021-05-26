@@ -1,0 +1,99 @@
+@import './src/scss/vendors/ng-select/ng-select.scss';
+@import '~ngx-bootstrap/datepicker/bs-datepicker.scss';
+@import './src/scss/vendors/bs-datepicker/datepicker';
+
+// todo: temp c-dark-theme plumbing for ng-select
+.c-dark-theme ng-select.bootstrap {
+  > div {
+    color: #e1e1e1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #23282c;
+
+    .toggle {
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+
+    .multiple {
+      .option {
+        background-color: #515b65;
+        border-color: rgb(24, 25, 36);
+        color: #e1e1e1;
+
+        .deselect-option {
+          border-top-left-radius: 0.25rem;
+          border-bottom-left-radius: 0.25rem;
+          border-color: rgb(24, 25, 36) !important;
+          color: rgb(24, 25, 36);
+        }
+      }
+
+      input {
+        background-color: rgba(0, 0, 0, 0);
+        margin-inline-start: 0.5rem;
+        color: rgb(225, 225, 225);
+      }
+    }
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(50, 31, 219, 0.25);
+    }
+  }
+
+  select-dropdown {
+    > div {
+      box-shadow: 0 0 10px 0 #aaa;
+      background-color: #515b65;
+      border-color: #515b65;
+      border-radius: 0.25rem;
+    }
+
+    .filter input {
+      color: #e1e1e1;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0.25rem;
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .options {
+      border-radius: 0.25rem;
+      background-color: #515b65;
+
+      .selected {
+        background-color: #23282c;
+        color: #e1e1e1;
+      }
+
+      .disabled {
+        background-color: #515b65;
+        color: lighten(#515b65, 30%);
+      }
+    }
+  }
+}
+
+ng-select.bootstrap {
+  div:focus,
+  .single:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(50, 31, 219, 0.25);
+  }
+
+  .multiple {
+    input {
+      margin-inline-start: 0.5rem;
+    }
+  }
+}
+
+:host c-input-group-prepend c-input-group-text c-icon {
+  &:only-child {
+    display: flex;
+  }
+}
+
+:host c-input-group-append c-input-group-text c-icon {
+  &:only-child {
+    display: flex;
+  }
+}

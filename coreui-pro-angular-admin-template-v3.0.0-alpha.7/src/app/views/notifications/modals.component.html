@@ -1,0 +1,159 @@
+<div class="fade-in">
+  <c-row>
+    <c-col lg="12">
+      <c-card>
+        <c-card-header>
+          Modals
+        </c-card-header>
+        <c-card-body>
+          <!-- Button trigger modal -->
+          <button cButton color="secondary" class="mr-1" (click)="defaultModal.show()">
+            Launch default modal
+          </button>
+          <button cButton color="secondary" class="mr-1" (click)="lgModal.show()">
+            Launch large modal
+          </button>
+          <button cButton color="secondary" class="mr-1" (click)="smModal.show()">
+            Launch small modal
+          </button>
+          <button cButton color="secondary" class="mr-1" (click)="xlModal.show()">
+            Launch xl modal
+          </button>
+          <hr>
+          <button cButton color="primary" class="mr-1" (click)="primaryModal.show()">
+            Primary modal
+          </button>
+          <button cButton color="success" class="mr-1" (click)="successModal.show()">
+            Success modal
+          </button>
+          <button cButton color="warning" class="mr-1" (click)="warningModal.show()">
+            Warning modal
+          </button>
+          <button cButton color="danger" class="mr-1" (click)="dangerModal.show()">
+            Danger modal
+          </button>
+          <button cButton color="info" class="mr-1" (click)="infoModal.show()">
+            Info modal
+          </button>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>
+
+<c-modal #defaultModal [closeOnBackdrop]="false">
+  <ng-template #modalHeader>
+    <h4 class="c-modal-title">Default modal</h4>
+  </ng-template>
+  <ng-template #modalBody>
+    <p>One fine body&hellip;</p>
+  </ng-template>
+  <ng-template #modalFooter>
+    <button cButton color="secondary" (click)="defaultModal.hide()">Close</button>
+    <button cButton color="primary" >Save changes</button>
+  </ng-template>
+</c-modal>
+
+<c-modal #lgModal size="lg">
+  <ng-template #modalHeader>
+    <h4 class="c-modal-title">Large modal</h4>
+  </ng-template>
+  <ng-template #modalBody [ngClass]="'text-center'">
+    <p>One fine body&hellip;</p>
+  </ng-template>
+  <ng-template #modalFooter>
+    <button cButton color="secondary" (click)="lgModal.hide()">Close</button>
+    <button cButton color="primary" >Save changes</button>
+  </ng-template>
+</c-modal>
+
+<c-modal #smModal size="sm">
+  <ng-template #modalHeader>
+    <h4 class="c-modal-title">Small modal</h4>
+  </ng-template>
+  <ng-template #modalBody>
+    <p>One fine body&hellip;</p>
+  </ng-template>
+  <ng-template #modalFooter>
+    <button cButton color="secondary" (click)="smModal.hide()">Close</button>
+    <button cButton color="primary" >Save changes</button>
+  </ng-template>
+</c-modal>
+
+<c-modal #xlModal size="xl">
+  <ng-template #modalHeader>
+    <h4 class="c-modal-title">XL modal</h4>
+  </ng-template>
+  <ng-template #modalBody>
+    <p>One fine body&hellip;</p>
+  </ng-template>
+  <ng-template #modalFooter>
+    <button cButton color="secondary" (click)="xlModal.hide()">Close</button>
+    <button cButton color="primary" >Save changes</button>
+  </ng-template>
+</c-modal>
+
+<c-modal #primaryModal color="primary">
+  <ng-template #modalHeader>
+    <h4 class="c-modal-title">Primary modal</h4>
+  </ng-template>
+  <ng-template #modalBody>
+    <p>One fine body&hellip;</p>
+  </ng-template>
+  <ng-template #modalFooter>
+    <button cButton color="secondary" (click)="primaryModal.hide()">Close</button>
+    <button cButton color="primary" >Save changes</button>
+  </ng-template>
+</c-modal>
+
+<c-modal #successModal color="success">
+  <ng-template #modalHeader>
+    <h4 class="c-modal-title">Success modal</h4>
+  </ng-template>
+  <ng-template #modalBody>
+    <p>One fine body&hellip;</p>
+  </ng-template>
+  <ng-template #modalFooter>
+    <button cButton color="secondary" (click)="successModal.hide()">Close</button>
+    <button cButton color="success" >Save changes</button>
+  </ng-template>
+</c-modal>
+
+<c-modal #warningModal color="warning">
+  <ng-template #modalHeader>
+    <h4 class="c-modal-title">Warning modal</h4>
+  </ng-template>
+  <ng-template #modalBody>
+    <p>One fine body&hellip;</p>
+  </ng-template>
+  <ng-template #modalFooter>
+    <button cButton color="secondary" (click)="warningModal.hide()">Close</button>
+    <button cButton color="warning" >Save changes</button>
+  </ng-template>
+</c-modal>
+
+<c-modal #dangerModal color="danger">
+  <ng-template #modalHeader>
+    <h4 class="c-modal-title">Danger modal</h4>
+  </ng-template>
+  <ng-template #modalBody>
+    <p>One fine body&hellip;</p>
+  </ng-template>
+  <ng-template #modalFooter>
+    <button cButton color="secondary" (click)="dangerModal.hide()">Close</button>
+    <button cButton color="danger" >Save changes</button>
+  </ng-template>
+</c-modal>
+
+<c-modal #infoModal color="info">
+  <ng-template #modalHeader>
+    <h4 class="c-modal-title">Info modal</h4>
+  </ng-template>
+  <ng-template #modalBody>
+    <p>One fine body&hellip;</p>
+  </ng-template>
+  <ng-template #modalFooter>
+    <button cButton color="secondary" (click)="infoModal.hide()">Close</button>
+    <button cButton color="info" >Save changes</button>
+  </ng-template>
+</c-modal>

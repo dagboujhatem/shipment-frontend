@@ -1,0 +1,786 @@
+<div class="fade-in">
+  <c-row>
+    <c-col sm="6" lg="3">
+      <c-card class="text-white bg-gradient-primary">
+        <c-card-body class="pb-0 d-flex justify-content-between align-items-start">
+          <div>
+            <div class="text-value-lg">9.823</div>
+            <div>Members online</div>
+          </div>
+          <c-button-group dropdown>
+            <button class="btn btn-transparent p-0 dropdown-toggle" dropdownToggle>
+              <c-icon name="cil-settings"></c-icon>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </c-button-group>
+        </c-card-body>
+        <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;"  [@.disabled]="true">
+          <canvas cNoZoneBaseChart
+                  class="chart"
+                  height="70"
+                  [datasets]="chart[0].data"
+                  [labels]="chart[0].labels"
+                  [options]="chart[0].options"
+                  [colors]="chart[0].colors"
+                  [chartType]="chart[0].type">
+          </canvas>
+        </div>
+      </c-card>
+    </c-col>
+    <c-col sm="6" lg="3">
+      <c-card class="text-white bg-gradient-info">
+        <c-card-body class="pb-0">
+          <button type="button" class="btn btn-transparent p-0 float-right">
+            <i class="c-icon cil-location-pin"></i>
+          </button>
+          <div class="text-value-lg">9.823</div>
+          <div>Members online</div>
+        </c-card-body>
+        <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;" [@.disabled]="true">
+          <canvas cNoZoneBaseChart
+                  class="chart"
+                  [datasets]="chart[1].data"
+                  [labels]="chart[1].labels"
+                  [options]="chart[1].options"
+                  [colors]="chart[1].colors"
+                  [chartType]="chart[1].type">
+          </canvas>
+        </div>
+      </c-card>
+    </c-col>
+    <c-col sm="6" lg="3">
+      <c-card class="text-white bg-gradient-warning">
+        <c-card-body class="pb-0">
+          <div class="btn-group float-right" dropdown>
+            <button type="button" class="btn btn-transparent dropdown-toggle p-0" dropdownToggle>
+              <i class="c-icon cil-settings"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <div class="text-value-lg">9.823</div>
+          <div>Members online</div>
+        </c-card-body>
+        <div class="c-chart-wrapper mt-3" style="height:70px;" [@.disabled]="true">
+          <canvas cNoZoneBaseChart
+                  class="chart"
+                  [datasets]="chart[2].data"
+                  [labels]="chart[2].labels"
+                  [options]="chart[2].options"
+                  [colors]="chart[2].colors"
+                  [chartType]="chart[2].type">
+          </canvas>
+        </div>
+      </c-card>
+    </c-col>
+    <c-col sm="6" lg="3">
+      <c-card class="text-white bg-gradient-danger">
+        <c-card-body class="pb-0">
+          <div class="btn-group float-right" dropdown>
+            <button type="button" class="btn btn-transparent dropdown-toggle p-0" dropdownToggle>
+              <i class="c-icon cil-settings"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          <div class="text-value-lg">9.823</div>
+          <div>Members online</div>
+        </c-card-body>
+        <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;" [@.disabled]="true">
+          <canvas cNoZoneBaseChart
+                  class="chart"
+                  [datasets]="chart[3].data"
+                  [labels]="chart[3].labels"
+                  [options]="chart[3].options"
+                  [colors]="chart[3].colors"
+                  [chartType]="chart[3].type">
+          </canvas>
+        </div>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-card>
+    <c-card-body>
+      <c-row>
+        <c-col sm="5">
+          <h4 class="card-title mb-0">Traffic</h4>
+          <div class="small text-muted">November 2019</div>
+        </c-col>
+        <c-col sm="7" class="d-none d-md-block">
+          <c-button-toolbar class="float-right">
+            <c-button-group class="mx-3">
+              <button cButton color="secondary" variant="outline" [(ngModel)]="radioModel" btnRadio="Day" id="option1">Day</button>
+              <button cButton color="secondary" variant="outline" [(ngModel)]="radioModel" btnRadio="Month" id="option2">Month</button>
+              <button cButton color="secondary" variant="outline" [(ngModel)]="radioModel" btnRadio="Year" id="option3">Year</button>
+            </c-button-group>
+            <button cButton color="primary">
+              <c-icon name="cil-cloud-download"></c-icon>
+            </button>
+          </c-button-toolbar>
+        </c-col>
+      </c-row>
+      <div class="c-chart-wrapper" style="height:300px;margin-top:40px;"  [@.disabled]="true">
+        <canvas cNoZoneBaseChart class="chart"
+          [datasets]="mainChart.Data"
+          [labels]="mainChart.labels"
+          [options]="mainChart.options"
+          [colors]="mainChart.colors"
+          [chartType]="mainChart.type">
+        </canvas>
+      </div>
+    </c-card-body>
+    <c-card-footer>
+      <c-row class="text-center">
+        <c-col sm="12" [md]="true" class="mb-sm-2 mb-0">
+          <div class="text-muted">Visits</div>
+          <strong>29.703 Users (40%)</strong>
+          <c-progress size="xs" class="mt-2">
+            <c-progress-bar color="success" [value]="40"></c-progress-bar>
+          </c-progress>
+        </c-col>
+        <c-col sm="12" [md]="true" class="mb-sm-2 mb-0">
+          <div class="text-muted">Unique</div>
+          <strong>24.093 Users (20%)</strong>
+          <c-progress size="xs" class="mt-2">
+            <c-progress-bar color="info" [value]="20"></c-progress-bar>
+          </c-progress>
+        </c-col>
+        <c-col sm="12" [md]="true" class="mb-sm-2 mb-0">
+          <div class="text-muted">Pageviews</div>
+          <strong>78.706 Views (60%)</strong>
+          <c-progress size="xs" class="mt-2">
+            <c-progress-bar color="warning" [value]="60"></c-progress-bar>
+          </c-progress>
+        </c-col>
+        <c-col sm="12" [md]="true" class="mb-sm-2 mb-0">
+          <div class="text-muted">New Users</div>
+          <strong>22.123 Users (80%)</strong>
+          <c-progress size="xs" class="mt-2">
+            <c-progress-bar color="danger" [value]="80"></c-progress-bar>
+          </c-progress>
+        </c-col>
+        <c-col sm="12" [md]="true" class="mb-sm-2 mb-0">
+          <div class="text-muted">Bounce Rate</div>
+          <strong>40.15%</strong>
+          <c-progress size="xs" class="mt-2">
+            <c-progress-bar [value]="40"></c-progress-bar>
+          </c-progress>
+        </c-col>
+      </c-row>
+    </c-card-footer>
+  </c-card>
+  <!--/.card-->
+  <c-row>
+    <c-col sm="6" lg="3">
+      <c-card>
+        <c-card-header class="content-center text-white p-0 bg-facebook">
+          <c-icon name="cib-facebook" class="my-4" height="52"></c-icon>
+          <div class="c-chart-brand">
+            <canvas
+              cNoZoneBaseChart
+              [datasets]="brandBoxChart.Data1"
+              [labels]="brandBoxChart.labels"
+              [options]="brandBoxChart.options"
+              [colors]="brandBoxChart.colors"
+              [legend]="brandBoxChart.legend"
+              [chartType]="brandBoxChart.type">
+            </canvas>
+          </div>
+        </c-card-header>
+        <c-card-body class="row text-center">
+          <c-col>
+            <div class="text-value-lg">89k</div>
+            <div class="text-uppercase text-muted small">friends</div>
+          </c-col>
+          <div class="c-vr"></div>
+          <c-col>
+            <div class="text-value-lg">459</div>
+            <div class="text-uppercase text-muted small">feeds</div>
+          </c-col>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col sm="6" lg="3">
+      <c-card>
+        <c-card-header class="content-center text-white p-0 bg-twitter">
+          <c-icon name="cib-twitter" class="my-4" height="52"></c-icon>
+          <div class="c-chart-brand">
+            <canvas
+              cNoZoneBaseChart
+              [datasets]="brandBoxChart.Data2"
+              [labels]="brandBoxChart.labels"
+              [options]="brandBoxChart.options"
+              [colors]="brandBoxChart.colors"
+              [legend]="brandBoxChart.legend"
+              [chartType]="brandBoxChart.type">
+            </canvas>
+          </div>
+        </c-card-header>
+        <c-card-body class="row text-center">
+          <c-col>
+            <div class="text-value-lg">973k</div>
+            <div class="text-uppercase text-muted small">followers</div>
+          </c-col>
+          <div class="c-vr"></div>
+          <c-col>
+            <div class="text-value-lg">1.792</div>
+            <div class="text-uppercase text-muted small">tweets</div>
+          </c-col>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col sm="6" lg="3">
+      <c-card>
+        <c-card-header class="content-center text-white p-0 bg-linkedin">
+          <c-icon name="cib-linkedin" class="my-4" height="52"></c-icon>
+          <div class="c-chart-brand">
+            <canvas cNoZoneBaseChart
+              [datasets]="brandBoxChart.Data3"
+              [labels]="brandBoxChart.labels"
+              [options]="brandBoxChart.options"
+              [colors]="brandBoxChart.colors"
+              [legend]="brandBoxChart.legend"
+              [chartType]="brandBoxChart.type">
+            </canvas>
+          </div>
+        </c-card-header>
+        <c-card-body class="row text-center">
+          <c-col>
+            <div class="text-value-lg">500+</div>
+            <div class="text-uppercase text-muted small">contacts</div>
+          </c-col>
+           <div class="c-vr"></div>
+          <c-col>
+            <div class="text-value-lg">292</div>
+            <div class="text-uppercase text-muted small">feeds</div>
+          </c-col>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col sm="6" lg="3">
+      <c-card>
+        <c-card-header class="content-center text-white p-0 bg-gradient-warning">
+          <c-icon name="cil-calendar" class="my-4" height="52"></c-icon>
+          <div class="c-chart-brand">
+            <canvas
+              cNoZoneBaseChart
+              [datasets]="brandBoxChart.Data4"
+              [labels]="brandBoxChart.labels"
+              [options]="brandBoxChart.options"
+              [colors]="brandBoxChart.colors"
+              [legend]="brandBoxChart.legend"
+              [chartType]="brandBoxChart.type">
+            </canvas>
+          </div>
+        </c-card-header>
+        <c-card-body class="row text-center">
+          <c-col>
+            <div class="text-value-lg">12</div>
+            <div class="text-uppercase text-muted small">events</div>
+          </c-col>
+           <div class="c-vr"></div>
+          <c-col>
+            <div class="text-value-lg">4</div>
+            <div class="text-uppercase text-muted small">meetings</div>
+          </c-col>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col md="12">
+      <c-card>
+        <c-card-header>
+          Traffic &amp; Sales
+        </c-card-header>
+        <c-card-body>
+          <c-row>
+            <c-col sm="6">
+              <c-row>
+                <c-col sm="6">
+                  <c-callout [color]="'info'">
+                    <small class="text-muted">New Clients</small>
+                    <br>
+                    <strong class="h4">9,123</strong>
+                  </c-callout>
+                </c-col>
+                <c-col sm="6">
+                  <c-callout color="danger">
+                    <small class="text-muted">Recuring Clients</small>
+                    <br>
+                    <strong class="h4">22,643</strong>
+                  </c-callout>
+                </c-col>
+              </c-row>
+              <hr class="mt-0">
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Monday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="info" [value]="34"></c-progress-bar>
+                  </c-progress>
+                  <c-progress size="xs">
+                    <c-progress-bar color="danger" [value]="78"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Tuesday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="info" [value]="56"></c-progress-bar>
+                  </c-progress>
+                  <c-progress size="xs">
+                    <c-progress-bar color="danger" [value]="94"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Wednesday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="info" [value]="12"></c-progress-bar>
+                  </c-progress>
+                  <c-progress size="xs">
+                    <c-progress-bar color="danger" [value]="67"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Thursday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="info" [value]="43"></c-progress-bar>
+                  </c-progress>
+                  <c-progress size="xs">
+                    <c-progress-bar color="danger" [value]="91"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Friday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="info" [value]="22"></c-progress-bar>
+                  </c-progress>
+                  <c-progress size="xs">
+                    <c-progress-bar color="danger" [value]="73"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Saturday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="info" [value]="53"></c-progress-bar>
+                  </c-progress>
+                  <c-progress size="xs">
+                    <c-progress-bar color="danger" [value]="82"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Sunday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="info" [value]="9"></c-progress-bar>
+                  </c-progress>
+                  <c-progress size="xs">
+                    <c-progress-bar color="danger" [value]="69"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="legend text-center">
+                <small>
+                  <sup><span class="badge badge-pill badge-info">&nbsp;</span></sup>
+                  New clients
+                  &nbsp;&nbsp;
+                  <sup><span class="badge badge-pill badge-danger">&nbsp;</span></sup>
+                  Recurring clients
+                </small>
+              </div>
+            </c-col>
+            <c-col sm="6">
+              <c-row>
+                <c-col sm="6">
+                  <c-callout color="warning">
+                    <small class="text-muted">Pageviews</small>
+                    <br>
+                    <strong class="h4">78,623</strong>
+                  </c-callout>
+                </c-col>
+                <c-col sm="6">
+                  <c-callout color="success">
+                    <small class="text-muted">Organic</small>
+                    <br>
+                    <strong class="h4">49,123</strong>
+                  </c-callout>
+                </c-col>
+              </c-row>
+              <hr class="mt-0">
+              <div class="progress-group">
+                <div class="progress-group-header">
+<!--                  <c-icon name="cil-user" customClasses="progress-group-icon" ></c-icon>-->
+                  <c-icon name="cil-user" customClasses="progress-group-icon" ></c-icon>
+                  <div>Male</div>
+                  <div class="mfs-auto font-weight-bold">43%</div>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="warning" [value]="43"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group mb-5">
+                <div class="progress-group-header">
+                  <c-icon name="cil-user-female" customClasses="progress-group-icon" ></c-icon>
+                  <div>Female</div>
+                  <div class="mfs-auto font-weight-bold">37%</div>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="warning" [value]="37"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-group-header align-items-end">
+                  <c-icon name="cib-google" customClasses="progress-group-icon" ></c-icon>
+                  <div>Organic Search</div>
+                  <div class="mfs-auto font-weight-bold mfe-2">191.235</div>
+                  <div class="text-muted small">(56%)</div>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="success" [value]="56"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-group-header align-items-end">
+                  <c-icon name="cib-facebook-f" customClasses="progress-group-icon" ></c-icon>
+                  <div>Facebook</div>
+                  <div class="mfs-auto font-weight-bold mfe-2">51.223</div>
+                  <div class="text-muted small">(15%)</div>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="success" [value]="15"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-group-header align-items-end">
+                  <c-icon name="cib-twitter" customClasses="progress-group-icon" ></c-icon>
+                  <div>Twitter</div>
+                  <div class="mfs-auto font-weight-bold mfe-2">37.564</div>
+                  <div class="text-muted small">(11%)</div>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="success" [value]="11"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="progress-group">
+                <div class="progress-group-header align-items-end">
+                  <c-icon name="cib-linkedin" customClasses="progress-group-icon" ></c-icon>
+                  <div>LinkedIn</div>
+                  <div class="mfs-auto font-weight-bold mfe-2">27.319</div>
+                  <div class="text-muted small">(8%)</div>
+                </div>
+                <div class="progress-group-bars">
+                  <c-progress size="xs">
+                    <c-progress-bar color="success" [value]="8"></c-progress-bar>
+                  </c-progress>
+                </div>
+              </div>
+              <div class="divider text-center">
+                <button type="button" class="btn text-muted btn-link btn-sm">
+                  <c-icon name="cil-options"></c-icon>
+                </button>
+              </div>
+            </c-col>
+          </c-row>
+          <br>
+          <table class="table table-responsive-sm table-hover table-outline mb-0">
+            <thead class="thead-light">
+              <tr>
+                <th class="text-center">
+                  <c-icon name="cil-people"></c-icon>
+                </th>
+                <th>User</th>
+                <th class="text-center">Country</th>
+                <th>Usage</th>
+                <th class="text-center">Payment Method</th>
+                <th>Activity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">
+                  <div class="c-avatar">
+                    <img src="assets/img/avatars/1.jpg" class="c-avatar-img" alt="user@email.com">
+                    <span class="c-avatar-status bg-success"></span>
+                  </div>
+                </td>
+                <td>
+                  <div>Yiorgos Avraamu</div>
+                  <div class="small text-muted">
+                    <span>New</span> | Registered: Jan 1, 2015
+                  </div>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cif-us" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <strong>50%</strong>
+                    </div>
+                    <div class="float-right">
+                      <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                    </div>
+                  </div>
+                  <c-progress size="xs">
+                    <c-progress-bar color="success" [value]="50"></c-progress-bar>
+                  </c-progress>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cib-cc-mastercard" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="small text-muted">Last login</div>
+                  <strong>10 sec ago</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="c-avatar">
+                    <img src="assets/img/avatars/2.jpg" class="c-avatar-img" alt="user@email.com">
+                    <span class="c-avatar-status bg-danger"></span>
+                  </div>
+                </td>
+                <td>
+                  <div>Avram Tarasios</div>
+                  <div class="small text-muted">
+                    <span>Recurring</span> | Registered: Jan 1, 2015
+                  </div>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cif-br" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <strong>10%</strong>
+                    </div>
+                    <div class="float-right">
+                      <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                    </div>
+                  </div>
+                  <c-progress size="xs">
+                    <c-progress-bar color="info" [value]="10"></c-progress-bar>
+                  </c-progress>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cib-cc-visa" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="small text-muted">Last login</div>
+                  <strong>5 minutes ago</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="c-avatar">
+                    <img src="assets/img/avatars/3.jpg" class="c-avatar-img" alt="user@email.com">
+                    <span class="c-avatar-status bg-warning"></span>
+                  </div>
+                </td>
+                <td>
+                  <div>Quintin Ed</div>
+                  <div class="small text-muted">
+                    <span>New</span> | Registered: Jan 1, 2015
+                  </div>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cif-in" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <strong>74%</strong>
+                    </div>
+                    <div class="float-right">
+                      <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                    </div>
+                  </div>
+                  <c-progress size="xs">
+                    <c-progress-bar color="warning" [value]="74"></c-progress-bar>
+                  </c-progress>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cib-cc-stripe" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="small text-muted">Last login</div>
+                  <strong>1 hour ago</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="c-avatar">
+                    <img src="assets/img/avatars/4.jpg" class="c-avatar-img" alt="user@email.com">
+                    <span class="c-avatar-status bg-secondary"></span>
+                  </div>
+                </td>
+                <td>
+                  <div>Enéas Kwadwo</div>
+                  <div class="small text-muted">
+                    <span>New</span> | Registered: Jan 1, 2015
+                  </div>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cif-fr" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <strong>98%</strong>
+                    </div>
+                    <div class="float-right">
+                      <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                    </div>
+                  </div>
+                  <c-progress size="xs">
+                    <c-progress-bar color="danger" [value]="98"></c-progress-bar>
+                  </c-progress>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cib-cc-paypal" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="small text-muted">Last login</div>
+                  <strong>Last month</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="c-avatar">
+                    <img src="assets/img/avatars/5.jpg" class="c-avatar-img" alt="user@email.com">
+                    <span class="c-avatar-status bg-success"></span>
+                  </div>
+                </td>
+                <td>
+                  <div>Agapetus Tadeáš</div>
+                  <div class="small text-muted">
+                    <span>New</span> | Registered: Jan 1, 2015
+                  </div>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cif-es" size="2xl" ></c-icon>
+                </td>
+                <td>
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <strong>22%</strong>
+                    </div>
+                    <div class="float-right">
+                      <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                    </div>
+                  </div>
+                  <c-progress size="xs">
+                    <c-progress-bar color="info" [value]="22"></c-progress-bar>
+                  </c-progress>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cib-cc-apple-pay" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="small text-muted">Last login</div>
+                  <strong>Last week</strong>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  <div class="c-avatar">
+                    <img src="assets/img/avatars/6.jpg" class="c-avatar-img" alt="user@email.com">
+                    <span class="c-avatar-status bg-danger"></span>
+                  </div>
+                </td>
+                <td>
+                  <div>Friderik Dávid</div>
+                  <div class="small text-muted">
+                    <span>New</span> | Registered: Jan 1, 2015
+                  </div>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cif-pl" size="2xl" title="pl" ></c-icon>
+                </td>
+                <td>
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <strong>43%</strong>
+                    </div>
+                    <div class="float-right">
+                      <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                    </div>
+                  </div>
+                  <c-progress size="xs">
+                    <c-progress-bar color="success" [value]="43"></c-progress-bar>
+                  </c-progress>
+                </td>
+                <td class="text-center">
+                  <c-icon name="cib-cc-amex" size="2xl"></c-icon>
+                </td>
+                <td>
+                  <div class="small text-muted">Last login</div>
+                  <strong>Yesterday</strong>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

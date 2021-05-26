@@ -1,0 +1,46 @@
+<div class="fade-in">
+  <c-card>
+    <c-card-header>
+      Popovers
+      <c-card-header-actions class="card-header-actions">
+        <a
+          href="https://github.com/farengeyt451/ngx-tippy-wrapper"
+          target="_blank"
+        >
+          <small class="text-muted">docs</small>
+        </a>
+      </c-card-header-actions>
+    </c-card-header>
+    <c-card-body>
+      <p>Hover over the links below to see popover:</p>
+      <p>
+        Tight pants next level keffiyeh you
+        <a [routerLink] ngxTippy [tippyProps]="simpleProps">probably haven't</a>
+        heard of them. Photo booth beard raw denim letterpress vegan messenger
+        bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable
+        quinoa 8-bit
+        <a [routerLink] ngxTippy [tippyProps]="simpleProps">american apparel</a>
+        have a terry richardson vinyl chambray. Beard stumptown, cardigans banh
+        mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko
+        mcsweeney''s cleanse vegan chambray. A really ironic artisan
+        <a [routerLink] ngxTippy [tippyProps]="simpleProps">whatever keytar</a>
+        scenester farm-to-table banksy Austin twitter handle freegan cred raw
+        denim
+        <a [routerLink] ngxTippy [tippyProps]="simpleProps">single-origin</a> coffee
+        viral.
+      </p>
+    </c-card-body>
+  </c-card>
+  <c-card>
+    <c-card-header> Popover <small>positioning</small> </c-card-header>
+    <c-card-body>
+      <c-row class="text-center">
+        <c-col class="mb-5" col="4" *ngFor="let popover of popovers">
+          <button cButton color="primary" ngxTippy [tippyProps]="popover">
+            Popover on {{ popover.placement }}
+          </button>
+        </c-col>
+      </c-row>
+    </c-card-body>
+  </c-card>
+</div>

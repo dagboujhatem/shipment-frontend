@@ -1,0 +1,140 @@
+<div class="fade-in">
+  <c-row>
+    <c-col sm="12" md="6">
+      <c-card>
+        <c-card-header>
+          Collapse
+        </c-card-header>
+        <c-card-body>
+          <p>
+            <button cButton color="primary" (click)="toggleCollapse(0)">
+              Toggle collapse
+            </button>
+          </p>
+          <c-card cCollapse [show]="collapses[0]" >
+            <c-card-body>
+              {{loremText}}
+            </c-card-body>
+          </c-card>
+        </c-card-body>
+      </c-card>
+      <c-card>
+        <c-card-header>
+          Collapse <small>multiple targets</small>
+        </c-card-header>
+        <c-card-body>
+          <p>
+            <button cButton color="primary" (click)="toggleCollapse(1)" class="mr-1">
+              Toggle first
+            </button>
+            <button cButton color="primary" (click)="toggleCollapse(2)" class="mr-1">
+              Toggle second
+            </button>
+            <button cButton color="primary" (click)="toggleCollapse(1); toggleCollapse(2);" class="mr-1">
+              Toggle both
+            </button>
+          </p>
+          <c-row>
+            <c-col sm="12" md="6">
+              <c-card cCollapse [show]="collapses[1]" >
+                <c-card-body>
+                  {{loremText}}
+                </c-card-body>
+              </c-card>
+            </c-col>
+            <c-col sm="12" md="6">
+              <c-card cCollapse [show]="collapses[2]" >
+                <c-card-body>
+                  {{loremText}}
+                </c-card-body>
+              </c-card>
+            </c-col>
+          </c-row>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col sm="12" md="6">
+      <c-card>
+        <c-card-header>
+          Collapse <small>accordion</small>
+        </c-card-header>
+        <c-card-body>
+          <div class="accordion">
+            <c-card class="mb-0">
+              <c-card-header>
+                <button cButton [color]="'link'" [block]="true" (click)="toggleAccordion(0)" class="h5 m-0 p-0 text-justify">
+                  Collapsible Group Item #0
+                </button>
+              </c-card-header>
+              <c-card-body cCollapse [show]="accordion[0]">
+                {{loremText}}
+              </c-card-body>
+            </c-card>
+            <c-card class="mb-0">
+              <c-card-header>
+                <button cButton color="link" [block]="true" (click)="toggleAccordion(1)" class="mb-0 p-0 text-justify">
+                  <h5 class="mb-0">Collapsible Group Item #1</h5>
+                </button>
+              </c-card-header>
+              <c-card-body cCollapse [show]="accordion[1]" >
+                {{loremText}}
+              </c-card-body>
+            </c-card>
+            <c-card class="mb-0">
+              <c-card-header>
+                <button cButton color="link" [block]="true" (click)="toggleAccordion(2)" class="mb-0 p-0 text-justify">
+                  <h5 class="mb-0">Collapsible Group Item #2</h5>
+                </button>
+              </c-card-header>
+              <c-card-body cCollapse [show]="accordion[2]" >
+                {{loremText}}
+              </c-card-body>
+            </c-card>
+            </div>
+        </c-card-body>
+      </c-card>
+      <c-card>
+        <c-card-header>
+          Collapse <small>custom accordion</small>
+        </c-card-header>
+        <c-card-body>
+          <div class="accordion">
+            <button cButton [color]="'link'" (click)="toggleCustom(0)" class="m-0 p-0 text-left">
+              Toggle item #0
+            </button>
+            <div cCollapse [show]="custom[0]">
+              {{loremText}}
+            </div>
+            <button cButton color="link" (click)="toggleCustom(1)" class="mb-0 p-0 text-left">
+              Toggle item #1
+            </button>
+            <div cCollapse [show]="custom[1]" >
+              {{loremText}}
+            </div>
+          </div>
+        </c-card-body>
+      </c-card>
+      <c-card>
+        <c-card-header>
+          Accordion component
+        </c-card-header>
+        <c-card-body>
+          <c-accordion>
+            <c-accordion-group [isOpen]="false" class="bg-info">
+              <button cButton [color]="'link'" [block]="true" c-accordion-header class="mb-0 p-0 text-dark">
+                Toggle item #0
+              </button>
+              {{loremText}}
+            </c-accordion-group>
+            <c-accordion-group [isOpen]="true" class="bg-primary">
+              <button cButton [color]="'link'" [block]="true" c-accordion-header class="mb-0 p-0 text-light">
+                Toggle item #1
+              </button>
+              {{loremText}}
+            </c-accordion-group>
+          </c-accordion>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

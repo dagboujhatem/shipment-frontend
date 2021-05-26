@@ -1,0 +1,144 @@
+<div class="fade-in">
+  <c-row>
+    <c-col col="6">
+      <!--  <div class="card-columns cols-2">-->
+      <c-card>
+        <c-card-header>
+          Line Chart
+          <c-card-header-actions>
+            <a href="http://www.chartjs.org">
+              <small class="text-muted">docs</small>
+            </a>
+          </c-card-header-actions>
+        </c-card-header>
+        <c-card-body>
+          <div class="chart-wrapper">
+            <canvas
+              cNoZoneBaseChart
+              class="chart"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColours"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"
+            ></canvas>
+          </div>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col col="6">
+      <c-card>
+        <c-card-header>
+          Bar Chart
+        </c-card-header>
+        <c-card-body>
+          <div class="chart-wrapper">
+            <canvas
+              cNoZoneBaseChart
+              class="chart"
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"
+            ></canvas>
+          </div>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col col="6">
+      <c-card>
+        <c-card-header>
+          Doughnut Chart
+        </c-card-header>
+        <c-card-body>
+          <div class="chart-wrapper">
+            <canvas
+              cNoZoneBaseChart
+              class="chart"
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [options]="options"
+              [chartType]="doughnutChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"
+            ></canvas>
+          </div>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col col="6">
+      <c-card>
+        <c-card-header>
+          Radar Chart
+        </c-card-header>
+        <c-card-body>
+          <div class="chart-wrapper">
+            <canvas
+              cNoZoneBaseChart
+              class="chart"
+              [datasets]="radarChartData"
+              [labels]="radarChartLabels"
+              [options]="options"
+              [chartType]="radarChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"
+            ></canvas>
+          </div>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col col="6">
+      <c-card>
+        <c-card-header>
+          Pie Chart
+        </c-card-header>
+        <c-card-body>
+          <div class="chart-wrapper">
+            <canvas
+              cNoZoneBaseChart
+              class="chart"
+              [data]="pieChartData"
+              [labels]="pieChartLabels"
+              [options]="options"
+              [chartType]="pieChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"
+            ></canvas>
+          </div>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col col="6">
+      <c-card>
+        <c-card-header>
+          Polar Area Chart
+        </c-card-header>
+        <c-card-body>
+          <div class="chart-wrapper">
+            <canvas
+              cNoZoneBaseChart
+              class="chart"
+              [data]="polarAreaChartData"
+              [labels]="polarAreaChartLabels"
+              [legend]="polarAreaLegend"
+              [options]="options"
+              [chartType]="polarAreaChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"
+            ></canvas>
+          </div>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

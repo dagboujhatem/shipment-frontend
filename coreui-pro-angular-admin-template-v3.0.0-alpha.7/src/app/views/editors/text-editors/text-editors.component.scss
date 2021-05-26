@@ -1,0 +1,25 @@
+@import '~quill/dist/quill.snow.css';
+
+*[dir="rtl"] .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+  left: 0;
+  right: unset;
+}
+
+.c-dark-theme {
+  .ql-picker-label {
+    color: var(--color);
+  }
+  .ql-picker-options {
+    color: var(--color);
+    background-color: var(--dark-dark-theme) !important;
+    border-color: #181924;
+  }
+  .ql-toolbar.ql-snow svg {
+    .ql-stroke {
+      stroke: var(--color);
+    }
+    .ql-fill {
+      fill: var(--color);
+    }
+  }
+}

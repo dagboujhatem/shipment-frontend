@@ -1,0 +1,60 @@
+<li class="c-header-nav-item dropdown" dropdown placement="bottom">
+  <a [routerLink] class="c-header-nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+    <img src="assets/img/avatars/6.jpg" class="c-avatar" alt="admin@bootstrapmaster.com"/>
+  </a>
+  <div class="dropdown-menu dropdown-menu-right pt-0" *dropdownMenu aria-labelledby="account-dropdown">
+    <div class="dropdown-header text-center bg-light">
+      <strong>Account</strong>
+    </div>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-bell" class="mfe-2"></c-icon>
+      Updates
+      <c-badge color="info" class="mfs-auto">42</c-badge>
+    </a>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-envelope-open" class="mfe-2"></c-icon>
+      Messages
+      <c-badge color="success" class="mfs-auto">42</c-badge>
+    </a>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-task" class="mfe-2"></c-icon>
+      Tasks
+      <c-badge color="danger" class="mfs-auto">42</c-badge>
+    </a>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-comment-square" class="mfe-2"></c-icon>
+      Comment
+      <c-badge color="warning" class="mfs-auto">42</c-badge>
+    </a>
+    <div class="dropdown-header text-center bg-light">
+      <strong>Settings</strong>
+    </div>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-user" class="mfe-2"></c-icon>
+      Profile
+    </a>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-settings" class="mfe-2"></c-icon>
+      Setting
+    </a>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-dollar" class="mfe-2"></c-icon>
+      Payments
+      <c-badge color="dark" class="mfs-auto">42</c-badge>
+    </a>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-file" class="mfe-2"></c-icon>
+      Projects
+      <span class="badge badge-primary mfs-auto">42</span>
+    </a>
+    <div class="dropdown-divider"></div>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-shield-alt" class="mfe-2"></c-icon>
+      Lock account
+    </a>
+    <a [routerLink] class="dropdown-item">
+      <c-icon name="cil-lock-locked" class="mfe-2"></c-icon>
+      Logout
+    </a>
+  </div>
+</li>

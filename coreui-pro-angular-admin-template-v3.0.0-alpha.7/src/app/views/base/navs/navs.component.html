@@ -1,0 +1,263 @@
+<div class="fade-in">
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          Navs
+        </c-card-header>
+        <c-card-body>
+          <c-nav>
+            <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            <a cNavLink [routerLink]>Link</a>
+            <a cNavLink [routerLink]>Link</a>
+            <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+          </c-nav>
+          <hr>
+          <c-nav>
+            <c-nav-item>
+              <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+            </c-nav-item>
+          </c-nav>
+          <hr>
+          <c-nav class="justify-content-center">
+            <c-nav-item>
+              <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+            </c-nav-item>
+          </c-nav>
+          <hr>
+          <c-nav class="justify-content-end">
+            <c-nav-item>
+              <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+            </c-nav-item>
+          </c-nav>
+          <hr>
+          <c-nav variant="pills">
+            <c-nav-item>
+              <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">
+                <c-icon name="cil-basket"></c-icon>
+              </a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>
+                <c-icon name="cil-settings"></c-icon>
+              </a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>
+                <c-icon name="cil-bell"></c-icon>
+              </a>
+            </c-nav-item>
+            <c-nav-item>
+              <a [routerLink] cNavLink [disabled]="true">
+                <c-icon name="cil-envelope-closed"></c-icon>
+              </a>
+            </c-nav-item>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Navs <code>vertical</code>
+        </c-card-header>
+        <c-card-body>
+          <c-nav [vertical]="true">
+            <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            <a cNavLink [routerLink]>Link</a>
+            <a cNavLink [routerLink]>Link</a>
+            <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Navs <code>vertical</code>
+        </c-card-header>
+        <c-card-body>
+          <c-nav [vertical]="true">
+            <c-nav-item>
+              <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+            </c-nav-item>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Navs <code>variant="tabs"</code>
+        </c-card-header>
+        <c-card-body>
+          <c-nav variant="tabs">
+            <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            <a cNavLink [routerLink]>Link</a>
+            <a cNavLink [routerLink]>Link</a>
+            <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Navs <code>variant="pills"</code>
+        </c-card-header>
+        <c-card-body>
+          <c-nav variant="pills">
+            <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            <a cNavLink [routerLink]>Link</a>
+            <a cNavLink [routerLink]>Link</a>
+            <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Navs <code>variant="tabs"</code>
+        </c-card-header>
+        <c-card-body>
+          <c-nav variant="tabs">
+            <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            <div dropdown class="dropdown">
+              <a cNavLink class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" *dropdownMenu>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <a cNavLink [routerLink]>Link</a>
+            <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Navs <code>variant="pills"</code>
+        </c-card-header>
+        <c-card-body>
+          <c-nav variant="pills">
+            <c-nav-item>
+              <a cNavLink [routerLink]="'/base/navs'" routerLinkActive="active">Active</a>
+            </c-nav-item>
+            <c-nav-item dropdown class="dropdown">
+              <a cNavLink class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle (click)="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" *dropdownMenu>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+            </c-nav-item>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Navs <code>fill tabs</code>
+        </c-card-header>
+        <c-card-body>
+          <c-nav [fill]="true" variant="tabs">
+            <c-nav-item>
+              <a cNavLink [routerLink] active>Active</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link with a long name </a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [disabled]="true">Disabled</a>
+            </c-nav-item>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col>
+      <c-card>
+        <c-card-header>
+          Navs <code>justified tabs</code>
+        </c-card-header>
+        <c-card-body>
+          <c-nav [justified]="true" variant="tabs">
+            <c-nav-item>
+              <a cNavLink [routerLink] active>Active</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link</a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink]>Link with a long name </a>
+            </c-nav-item>
+            <c-nav-item>
+              <a cNavLink [routerLink] [disabled]="true">Disabled</a>
+            </c-nav-item>
+          </c-nav>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

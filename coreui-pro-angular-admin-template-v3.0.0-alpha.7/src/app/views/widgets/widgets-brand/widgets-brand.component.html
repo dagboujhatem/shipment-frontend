@@ -1,0 +1,142 @@
+<c-row>
+  <ng-container *ngIf="!noCharts">
+    <c-col md="3" sm="6">
+      <c-widget-brand
+        color="facebook"
+        rightHeader="89k"
+        rightFooter="friends"
+        leftHeader="459"
+        leftFooter="feeds"
+      >
+        <c-icon name="cib-facebook" height="52" class="my-4"> </c-icon>
+        <div class="c-chart-brand">
+          <canvas
+            cNoZoneBaseChart
+            [datasets]="brandBoxChart.Data1"
+            [labels]="brandBoxChart.labels"
+            [options]="brandBoxChart.options"
+            [colors]="brandBoxChart.colors"
+            [legend]="brandBoxChart.legend"
+            [chartType]="brandBoxChart.type"
+          >
+          </canvas>
+        </div>
+      </c-widget-brand>
+    </c-col>
+    <c-col md="3" sm="6">
+      <c-widget-brand
+        color="twitter"
+        rightHeader="973k"
+        rightFooter="followers"
+        leftHeader="1.792"
+        leftFooter="tweets"
+      >
+        <c-icon name="cib-twitter" height="52" class="my-4"> </c-icon>
+        <div class="c-chart-brand">
+          <canvas
+            cNoZoneBaseChart
+            [datasets]="brandBoxChart.Data2"
+            [labels]="brandBoxChart.labels"
+            [options]="brandBoxChart.options"
+            [colors]="brandBoxChart.colors"
+            [legend]="brandBoxChart.legend"
+            [chartType]="brandBoxChart.type"
+          >
+          </canvas>
+        </div>
+      </c-widget-brand>
+    </c-col>
+    <c-col md="3" sm="6">
+      <c-widget-brand
+        color="linkedin"
+        rightHeader="500+"
+        rightFooter="contracts"
+        leftHeader="292"
+        leftFooter="feeds"
+      >
+        <c-icon name="cib-linkedin" height="52" class="my-4"> </c-icon>
+        <div class="c-chart-brand">
+          <canvas
+            cNoZoneBaseChart
+            [datasets]="brandBoxChart.Data3"
+            [labels]="brandBoxChart.labels"
+            [options]="brandBoxChart.options"
+            [colors]="brandBoxChart.colors"
+            [legend]="brandBoxChart.legend"
+            [chartType]="brandBoxChart.type"
+          >
+          </canvas>
+        </div>
+      </c-widget-brand>
+    </c-col>
+    <c-col md="3" sm="6">
+      <c-widget-brand
+        rightHeader="12"
+        rightFooter="events"
+        leftHeader="4"
+        leftFooter="meetings"
+        color="gradient-warning"
+      >
+        <c-icon name="cil-calendar" height="52" class="my-4"></c-icon>
+        <div class="c-chart-brand">
+          <canvas
+            cNoZoneBaseChart
+            [datasets]="brandBoxChart.Data4"
+            [labels]="brandBoxChart.labels"
+            [options]="brandBoxChart.options"
+            [colors]="brandBoxChart.colors"
+            [legend]="brandBoxChart.legend"
+            [chartType]="brandBoxChart.type"
+          >
+          </canvas>
+        </div>
+      </c-widget-brand>
+    </c-col>
+  </ng-container>
+  <ng-container *ngIf="noCharts">
+    <c-col md="3" sm="6">
+      <c-widget-brand
+        color="facebook"
+        rightHeader="89k"
+        rightFooter="friends"
+        leftHeader="459"
+        leftFooter="feeds"
+      >
+        <c-icon name="cib-facebook" height="56" class="my-4"></c-icon>
+      </c-widget-brand>
+    </c-col>
+    <c-col md="3" sm="6">
+      <c-widget-brand
+        color="twitter"
+        rightHeader="973k"
+        rightFooter="followers"
+        leftHeader="1.792"
+        leftFooter="tweets"
+      >
+        <c-icon name="cib-twitter" height="56" class="my-4"></c-icon>
+      </c-widget-brand>
+    </c-col>
+    <c-col md="3" sm="6">
+      <c-widget-brand
+        color="linkedin"
+        rightHeader="500+"
+        rightFooter="contracts"
+        leftHeader="292"
+        leftFooter="feeds"
+      >
+        <c-icon name="cib-linkedin" height="56" class="my-4"></c-icon>
+      </c-widget-brand>
+    </c-col>
+    <c-col md="3" sm="6">
+      <c-widget-brand
+        rightHeader="12"
+        rightFooter="events"
+        leftHeader="4"
+        leftFooter="meetings"
+        color="gradient-warning"
+      >
+        <c-icon name="cil-calendar" height="56" class="my-4"></c-icon>
+      </c-widget-brand>
+    </c-col>
+  </ng-container>
+</c-row>

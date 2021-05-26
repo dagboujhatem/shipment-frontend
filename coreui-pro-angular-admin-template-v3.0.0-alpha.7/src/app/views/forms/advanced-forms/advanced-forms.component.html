@@ -1,0 +1,173 @@
+<div class="fade-in">
+  <c-row>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          <strong>Angular 2 Input Mask</strong> - Text Mask
+          <a href="https://coreui.io/pro/angular/" class="badge badge-danger ml-2">CoreUI Pro</a>
+        </c-card-header>
+        <c-card-body>
+          <fieldset>
+            <c-form-group>
+              <label cLabel>Date input</label>
+              <c-input-group>
+                <c-input-group-prepend>
+                  <c-input-group-text>
+                    <c-icon name="cil-calendar" size="sm"></c-icon>
+                  </c-input-group-text>
+                </c-input-group-prepend>
+                <input cInput [textMask]="{mask: dateMask}" [(ngModel)]="dateModel">
+              </c-input-group>
+              <c-form-text>ex. 99/99/9999</c-form-text>
+            </c-form-group>
+            <c-form-group>
+              <label cLabel>Phone input</label>
+              <c-input-group>
+                <c-input-group-prepend>
+                  <c-input-group-text>
+                    <c-icon name="cil-phone" size="sm"></c-icon>
+                  </c-input-group-text>
+                </c-input-group-prepend>
+                <input cInput [textMask]="{mask: phoneMask}" [(ngModel)]="phoneModel">
+              </c-input-group>
+              <c-form-text>ex. (999) 999-9999</c-form-text>
+            </c-form-group>
+            <c-form-group>
+              <label>Taxpayer Identification Numbers</label>
+              <c-input-group>
+                <c-input-group-prepend>
+                  <c-input-group-text>
+                    <c-icon name="cil-dollar" size="sm"></c-icon>
+                  </c-input-group-text>
+                </c-input-group-prepend>
+                <input cInput [textMask]="{mask: taxMask}" [(ngModel)]="taxModel">
+              </c-input-group>
+              <c-form-text>ex. 99-9999999</c-form-text>
+            </c-form-group>
+            <c-form-group>
+              <label>Social Security Number</label>
+              <c-input-group>
+                <c-input-group-prepend>
+                  <c-input-group-text>
+                    <c-icon name="cil-user" size="sm"></c-icon>
+                  </c-input-group-text>
+                </c-input-group-prepend>
+                <input cInput [textMask]="{mask: ssnMask}" [(ngModel)]="ssnModel">
+              </c-input-group>
+              <c-form-text>ex. 999-99-9999</c-form-text>
+            </c-form-group>
+            <c-form-group>
+              <label>Eye Script</label>
+              <c-input-group>
+                <c-input-group-prepend>
+                  <c-input-group-text>
+                    <c-icon name="cil-asterisk" size="sm"></c-icon>
+                  </c-input-group-text>
+                </c-input-group-prepend>
+                <input cInput [textMask]="{mask: eyeScriptMask}" [(ngModel)]="eyeScriptModel">
+              </c-input-group>
+              <c-form-text>ex. ~9.99 ~9.99 999</c-form-text>
+            </c-form-group>
+            <c-form-group>
+              <label>Credit Card Number</label>
+              <c-input-group>
+                <c-input-group-prepend>
+                  <c-input-group-text>
+                    <c-icon name="cil-credit-card" size="sm"></c-icon>
+                  </c-input-group-text>
+                </c-input-group-prepend>
+                <input cInput [textMask]="{mask: ccnMask}" [(ngModel)]="ccnModel">
+              </c-input-group>
+              <c-form-text>ex. 9999 9999 9999 9999</c-form-text>
+            </c-form-group>
+          </fieldset>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col md="6">
+      <c-card>
+        <c-card-header>
+          <strong>Ng-select</strong>
+        </c-card-header>
+        <c-card-body>
+          <fieldset>
+            <c-form-group>
+              <ng-select
+              class="bootstrap"
+              placeholder="Choose your favorite country"
+              [options]="countries"
+              [allowClear]="true"></ng-select>
+            </c-form-group>
+            <c-form-group>
+              <ng-select
+              class="bootstrap"
+              placeholder="Choose your favorite country"
+              [options]="countries"
+              [multiple]="true"
+              [(ngModel)]="selectedCountries"></ng-select>
+            </c-form-group>
+          </fieldset>
+        </c-card-body>
+      </c-card>
+      <c-card>
+        <c-card-header>
+          <strong>Datepicker</strong>
+          <small>A lightweight &amp; configurable datepicker component</small>
+        </c-card-header>
+        <c-card-body>
+          <c-row>
+            <c-form-group cCol xs="12" md="6" col="12">
+              <input cInput
+              [minDate]="minDate"
+              [maxDate]="maxDate"
+              #dp="bsDatepicker"
+              bsDatepicker [(bsValue)]="bsValue">
+            </c-form-group>
+            <c-form-group cCol xs="12" md="3" col="12">
+              <button cButton color="success" (click)="dp.toggle()">Date Picker</button>
+            </c-form-group>
+          </c-row>
+          <c-row>
+            <c-form-group cCol xs="12" md="6" col="12">
+              <input cInput #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+            </c-form-group>
+            <c-form-group cCol xs="12" md="3" col="12">
+              <button cButton color="success" (click)="drp.toggle()">Date Range Picker</button>
+            </c-form-group>
+          </c-row>
+        </c-card-body>
+      </c-card>
+      <c-card>
+        <c-card-header>
+          <strong>Timepicker</strong>
+          <small>A lightweight &amp; configurable timepicker directive</small>
+        </c-card-header>
+        <c-card-body>
+          <timepicker [(ngModel)]="mytime" (change)="changed()" [hourStep]="hstep"
+          [minuteStep]="mstep" [showMeridian]="ismeridian"
+          [readonlyInput]="!isEnabled"></timepicker>
+          <pre class="alert alert-info">Time is: {{mytime}}</pre>
+          <c-row>
+            <c-col col="6">
+              Hours step is:
+              <select cSelect [(ngModel)]="hstep">
+                <option *ngFor="let opt of options.hstep" [value]="opt">{{opt}}</option>
+              </select>
+            </c-col>
+            <c-col col="6">
+              Minutes step is:
+              <select cSelect [(ngModel)]="mstep">
+                <option *ngFor="let opt of options.mstep" [value]="opt">{{opt}}</option>
+              </select>
+            </c-col>
+          </c-row>
+          <hr>
+          <button cButton color="info" class="mr-1 mb-1" (click)="toggleMode()">12H / 24H</button>
+          <button cButton color="secondary" class="mr-1 mb-1" (click)="isEnabled=!isEnabled">Enable / Disable input</button>
+          <button cButton color="primary" class="mr-1 mb-1" (click)="update()">Set to 14:00</button>
+          <button cButton color="danger" class="mr-1 mb-1" (click)="clear()">Clear</button>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+</div>

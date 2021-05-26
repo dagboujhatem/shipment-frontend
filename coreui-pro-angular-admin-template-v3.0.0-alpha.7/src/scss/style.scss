@@ -1,0 +1,14 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles with default layout.
+@import "~@coreui/coreui-pro/scss/coreui";
+@import "~@coreui/icons/css/brand.min.css";
+@import "~@coreui/icons/css/free.min.css";
+@import "~@coreui/chartjs";
+
+// Some temp fixes
+@import "fixes";
+
+// If you want to add something do it here
+@import "custom";
